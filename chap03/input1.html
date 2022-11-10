@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form
+      action="/chap03/div1.html"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <fieldset>
+        <legend>인적 사항 입력</legend>
+
+        이름: <input type="text" name="name" autofocus required /> <br />
+        <!--required:필수입력-->
+        학번:
+        <input type="text" name="number" size="10" placeholder="1111-11-1111" />
+        <!--placeholder:힌트주는거-->
+        <br />
+        패스워드: <input type="password" name="password" /><br />
+        성별: <input type="radio" name="gender" value="male" />남성
+        <input type="radio" name="gender" value="female" />여성 <br />
+
+        개인정보 동의 여부:
+        <label for="yes">동의</label>
+        <input type="radio" name="info" id="yes" value="yes" />
+        <label for="no">비동의</label>
+        <input type="radio" name="info" id="no" value="no" /><br />
+        이메일:
+        <input type="email" name="email" readonly /> <br />
+        url: <input type="url" name="url" /> <br />
+        전화번호: <input type="tel" name="tel" /> <br />
+      </fieldset>
+      <fieldset>
+        <legend>기타 입력사항</legend>
+
+        과일선택:<input
+          type="checkbox"
+          name="fruits"
+          value="apple"
+          checked
+        />Apple <br />
+        과일선택:<input type="checkbox" name="fruits" value="banana" />Banana
+        <br />
+
+        과일선택:<input type="checkbox" name="fruits" value="kiwi" />Kiwi <br />
+        <select name="cars">
+          <option value="bmw">BMW</option>
+          <option value="benz">BENZ</option>
+          <option value="hyundai" selected>현대자동차</option>
+          <option value="kia">KIA</option>
+        </select>
+        <br />
+
+        색상: <input type="color" name="color" /> <br />
+        월: <input type="month" name="month" /> <br />
+        날짜: <input type="date" name="date" /> <br />
+        주: <input type="week" name="week" /> <br />
+        시간: <input type="time" name="time" /> <br />
+        지역 시간 : <input type="datetime-local" name="localdatetime" /><br />
+        숫자 :<input
+          type="number"
+          name="number"
+          min="1"
+          max="10"
+          step="2"
+        /><br />
+        범위 :<input
+          type="range"
+          name="range"
+          min="1"
+          max="10"
+          step="2"
+        /><br />
+        <label>10초 남음</label>
+        <progress value="50" max="60"></progress> <br />
+        <label>진행율 30%</label>
+        <progress value="30" max="100"></progress>
+        <br />
+        <label>트래픽 초과</label>
+        <meter
+          min="1024"
+          max="10240"
+          low="2048"
+          high="8192"
+          value="5000"
+        ><meter ><br /> <!--안정권에 있으면 초록색, 초과되면 노란색으로 나타나는 것-->
+        파일첨부:<input type="file" accept="image/jpg,image/gif" /> <br />
+
+        검색:<input type="search" name="search" />
+      </fieldset>
+
+      고객의 의견<br />
+      <textarea name="feedback" rows="5" cols="50"></textarea><br />
+
+      <input
+        type="button"
+        value="계산"
+        onclick="alert('10000원 입니다.')"
+      /><br />
+      <input type="submit" value="제출" /><br /><br />
+      <button type="submit">
+        <img src="/chap03/html/submit.png" width="90px" height="50px" />
+      </button>
+      <input
+        type="image"
+        src="/chap03/html/submit-b.png"
+        width="90px"
+        height="50px"
+        alt="제출버튼"
+      />
+    </form>
+    <button type="button" onclick="alert('안녕하세요!')">눌러보세요</button>
+  </body>
+</html>
