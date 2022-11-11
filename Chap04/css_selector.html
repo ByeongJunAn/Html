@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>선택자</title>
+    <style>
+        #special{
+            background-color: chocolate;
+            color: rgb(19, 30, 65);
+        }.type1{text-align: center;}
+        p.type1{
+            color: rgb(99, 134, 0);
+        }
+        p.h1 {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        body em{color:rgb(240, 21, 21);} /* body 안에 있는 모든 em 후손들을 바꿈*/
+        body > h1 {color:darkmagenta;} /*--body 안에 있는 h1만 바꾸고 em은 후손이라 안바뀜*/
+        h4+ h3{color: aqua;} /*인접 형제 선택자 : h4바로 옆 우측에 있는 h3만 바꿈*/
+        h2~h4{color: deeppink;} /*일반 형제 선택자 : h2 우측에 있는 h4라고 설정된 태그들을 모두 바꿈*/
+
+        a:link{color: blue;}
+        a:visited{color:lime}   /*의사선택자*/
+        a:hover{color: salmon;}
+
+        
+        p[title] {color: darkgreen;}    /*속성선택자*/
+        h1[class="type1"]{color: darkcyan;}
+    </style>
+</head>
+<body>
+    <p id="special">id가 special인 단락입니다.</p> <!--p#special{id가 special인 단락입니다.}-->
+    <p title="title1">정상적인 단락입니다</p>
+    <h1 class="type1" >class가 <em>type1</em>인 헤딩입니다.</h1> <!--h1.type1{class가 type1인 헤딩입니다.}-->
+    <h2>h2단락입니다.</h2> <!--h2{h2단락입니다.}-->
+    <h4>h4단락입니다.</h4>
+    <h3>h3단락입니다.</h3>
+    <h3>h3단락입니다.</h3>
+    <h3>h3<em>단락</em>입니다.</h3>
+    <h3>h3단락입니다.</h3>
+    <h4>h4단락입니다.</h4>
+    <p>class가 <a href="https://www.naver.com/" target="_blank" >type1</a>인 단락입니다.</p> <!--p.type1{class가 type1인 단락입니다.}-->
+
+</body>
+</html>

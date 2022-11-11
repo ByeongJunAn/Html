@@ -1,0 +1,174 @@
+1. CSS
+    (1) 뜻 : Cascading Style Sheets의 약자로 Style Sheets는 스타일을 지정해주는 페이지로 보면되고 
+        Cascading은 선택자에 적용된 많은 스타일 중에 어떤 스타일로 브라우저에 표현할지 결정하는 원리
+
+    (2) 필요성 : css에 스타일 정보를 저장하면, 모든 페이지는 동일한 css 파일을 참조하고 css의 정보에 
+                따라 바뀌기 때문에 외양 변경이 쉽다. 따라서 문서 전체의 일관성을 유지할 수 있고 작업
+                시간도 단축할 수 있다.
+
+    (3) 문법
+        a. 스타일 변경 할 HTML요소를 선택한다. (선택자)
+        b. 선택자 뒤에 중괄호를 붙이고 이들 요소를 어떻게 그리는지 기술한다.(선언)
+        c. 각각의 CSS 선언은 항상 ';'으로 끝나야 한다.
+        d. 보통 HTML의 <head> 요소내에 작성하며 <style></style> 안에 적어준다.
+        (예시)
+        p{background-color:yellow;
+          border: 2px solid red;
+        }
+
+    (4) 주석 : <style></style> 내에서의 주석은 /**/안에 써야 한다.
+
+2. 선택자
+    선택자란 HTML요소 중에 원하는 특정 문장을 선택(연결)할때 정해주는 것을 말한다. 
+        
+        a.타입 선택자 : TAG(태그 <p>,<h1>...등등)를 선택할때 쓰인다. 
+        b.전체 선택자 : '*'로 정의되며 모든 요소를 다 적용한다.
+        c.클래스 선택자 : '.' 로 정의되며 몇 개의 요소를 하나의 클래스로 묶어서 스타일을 지정할 때 사용한다.
+            (예시)
+            <head>
+                <style>
+                    .type1{text-align:center;}
+                </style>
+            </head>
+            <body>
+                <h1 class="type1">class가 type1인 헤딩입니다.</h1>
+                <p class="type1">class가 type1인 단락입니다.</p>
+            </body> 
+
+        d.아이디 선택자 : '#'로 정의되며 일회용으로 하나의 요소만을 선택할때 사용한다.
+            (예시) #special{color : blue;}
+                   h1#special{color: blue;}
+        e.속성 선택자 '[]' 로 정의된다. 특정 속성값을 가지고 있는 HTML요소를 선택할 수 있다.
+            (예시)  <style>
+                        [title] { background: black; color: yellow; }
+                    </style>
+        f.의사 선택자 : ':'로 정의된다.  말 그대로 body에 클래스가 정의 된 것처럼 간주한다는 의미이다. 
+                    이는 <body>에 정의 하지 않아도 클래스를 사용 가능하다는 말이다.
+             
+            (예시)
+                    <head>
+                    <style>
+                        p{font-size: 14pt;}
+                        a:link{color:green;}
+                        a:visited{color: blue;}
+                        a:hover{color: red; font-size: 20pt;}
+                        a:active{background-color: yellow;}
+                    </style>
+                </head>
+                <body>
+
+                        <p><a href="http://www.google.com">구글</a></p>
+                        <p><a href="http://www.naver.com">네이버</a></p>
+                        <p><a href="http://www.daum.net">다음</a></p>
+
+                </body>
+           
+            
+3. CSS를 삽입하는 방법
+    (1) 외부 스타일 시트 : 스타일 시트를 외부에 파일로 저장
+        (예시) 
+
+         h1{color : red}     /*mystyle.css라는 .css 문서에 작성*/ 
+         p{color: #0026ff}   
+        
+        <head>
+        <link type="text/css" rel="stylesheet" href="mystyle.css">  /*extstyle이라는 .html 문서에 작성*/  
+                                                                    /*rel: html파일과 외부파일간의 관계(relationship)를 나타낸다. 
+                                                                    href:외부 파일의 위치를 적어준다. URL형식이다*/
+        </head>
+
+    (2) 내부 스타일 시트 : HTML 안에 <head> 안에 CSS를 정의 한다. 
+    (3) 인라인 스타일 시트 : <body> 부분의 각각의 요소마다 스타일을 지정한다.(스타일 시트의 장점이 사라지기 때문에 잘 안쓰임)
+    (4) 각 스타일을 사용할때의 우선순위 : 1등 !important 2등 인라인 3등 내부 4등 외부 5등 웹 브러우저 디폴트 값(아무것도 안줬을 때)
+
+4. 색상
+    (1) 이름으로 표현 :"red"
+    (2) 16진수로 표현 : #ff0000 <!--#xx(R)xx(G)xx(B)-->
+    (3) 10진수로 표현 : rgb(255,0,0)
+    (4) 퍼센트로 표현 : rgb(100%,0%,0%)
+
+5. 폰트
+    (1) 속성 
+        a. font : 한 줄에서 모든 폰트 속성을 설정할때
+        b. font-family : 폰트 패밀리 설정 (어떻게 생긴 폰트를 쓸건지 설정)
+        c. font-size : 폰트의 크기 설정
+        d. font-style : 폰트 스타일 설정
+        e. font-weight : 폰트의 볼트체 여부 설정 
+    
+    (2) font-family의 특징 :
+          a. 폰트 패밀리란 어떤 특징을 공유하는 폰트의 집합을 의미한다.
+          b. 브라우저가 HTML파일을 표시할 때, 클라이언트 컴퓨터에 지정된 폰트가 없으면 자동적으로 다음 폰트를 시도한다.
+          c. 폰트를 여러개 나열 할 때는 ,를 활용 하며 영어,일본어,한국어 순으로 적어야 한다.
+          (예시) 
+             body{
+                  font-family:"Times New Roman", Time, serif;
+                  }
+    (3) 폰트 크기 설정
+        a. pt 단위로 설정 
+        (예시)
+            body{font-size:20pt;}
+
+        b. px 단위로 설정
+        (예시)
+            body{font-size:20px;}
+        
+        c. %단위로 설정
+        (예시)
+            body{font-size:12px;}
+            h2{font-size:200%;} <!--부모 요소인 <body>의 200% 이므로 24px이 된다-->
+        
+        d. em단위로 설정
+                em 크기 단위는 배수를 의미한다. 1em은 부모 요소의 폰트 크기와 같다. 2em은 2배 
+        (예시)
+            body{font-size:12px;}
+            h2{font-size:2.0em;}
+
+    (4) 폰트 기타 설정
+        a. 폰트 굵기 (font-weight) : 폰트를 볼드체로 할것인지 아닌지를 지정한다. normal과 bold 두 가지가 있으며 bold가 굵은 글씨다
+        (예시)
+            h1#s1{ font-weight:normal;} 
+            h1#s2{ font-weight:bold;}
+
+        b. 폰트 기울기 (font-style) : 이탤릭 텍스트로 설정할건지를 지정한다. normal, italic, oblique 중에서 하나가 있으며 italic은 미리 만들어진
+                                    폰트가 존재하는 경우이고 oblique는 정상적인 폰트를 그리는 과정에서 기울인 폰트이다.
+        (예시)
+            h1#s1{font-style: normal;} 
+            h1#s2{font-style: italic;} 
+
+    (5) 폰트 축약 기법
+            a. 의미 : 폰트의 여러가지 속성은 한줄에서 사용할 수 있다. 
+            b. 나열하는 순서: "font-style font-variant font-weight font-size font-family"  순이다. 이 중에font-size와 font-family는
+                            반드시 필요하다. 만약 값이 생략되면 디폴트 값이 사용된다.
+
+            (예시)
+            <head> 
+                <style>
+                    p.style{font : italic 30px arial, sans-serif;}
+                    p.style2{font : bold 40px Georgia, serif;}
+                </style>
+            </head>
+            <body>
+                <p class="style1"> font: italic 30px arial,sans-serif></p>
+                <p class="style2"> font: bold 40px Georgia,serif></p>
+
+6. 텍스트 스타일 설정
+    (1) 속성
+        a. color 
+            (예시) 
+            body{color:blue;}
+
+        b. direction : 텍스트 작성 방향을 지정(가로쓰기, 세로쓰기)
+        c. letter-spacing :글자 간 간격을 지정
+        d. line-height : 텍스트 줄의 높이를 지정
+        e. text-align : 텍스트의 수평 정렬을 지정한다 (왼쪽 오른쪽 가운데 양쪽 정렬)
+            (예시)
+            h1{text-align : center; color:red;}
+            p.date{text-align : right; color:indigo;}
+            p.poet{text-align : justify; color:blue;}
+        f. text-decoration : 텍스트의 장식을 지정한다.
+            (예시)
+            h1{ text-decoration:overline;}
+            h1{ text-decoration:line-through;}
+            h1{ text-decoration:underline;}
+        g. text-shadow : 그림자 효과를 지정한다.
+        h. text-transform : 대소문자 변환을 지정한다.

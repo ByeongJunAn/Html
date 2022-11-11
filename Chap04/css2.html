@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li></li>       <!-- div>ul>li-->  <!-- '>' 는 자식요소 생성-->
+        </ul>
+    </div>
+
+
+    <div>
+        <ul>
+            <li></li>
+            <li></li>       <!-- div>ul>li*5--> 
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+      
+        <div></div>
+        <p></p>             <!-- div+p+bq--> <!-- '+'는 형제 요소 생성-->
+        <blockquote></blockquote>
+
+
+        
+        <div></div>
+        <div>              <!-- div+div>p>span+em^bq --> <!--'^' 한 단계 위에 요소 배치-->
+            <p><span></span><em></em></p>
+            <blockquote></blockquote>
+        </div>        
+
+
+       
+        <div></div>
+        <div>
+            <p><span></span><em></em></p>   <!--div+div>p>span+em^^^bq-->
+        </div>
+        <blockquote></blockquote>
+
+
+       
+        <p>Hello</p>   <!-- p{Hello}-->
+
+
+        <p>lorem</p>       <!--p{lorem}  의미없는 글 작성-->
+
+        <p>Lorem ipsum dolor sit amet consectetur.</p>    <!--p>lorem6  아무 단어 6개 가져오기-->
+
+        <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, modi iste aspernatur facilis cupiditate cum aliquam obcaecati rem, earum ipsa ipsum architecto consequatur repellat fugit at reiciendis impedit doloremque quae!</span><span>Deserunt molestias dicta, reprehenderit numquam eum animi nam praesentium nesciunt nisi? Quos, earum accusantium! Nesciunt exercitationem odio repellat porro illo. Tempore odit ea magni, unde at earum commodi iusto neque!</span><span>Repellendus at perferendis quos sed a aliquam tempore! Libero corrupti saepe hic tempora distinctio consequuntur animi quam, delectus, maiores optio doloribus nulla corporis ipsam nisi facilis illo ad debitis! Corrupti.</span><span>Provident qui quos deserunt delectus modi nostrum in voluptate. Harum minus repudiandae quisquam. Expedita fugit blanditiis ex ducimus. Distinctio ad nisi quidem voluptate debitis impedit tempora vero commodi magnam totam!</span><span>Aut beatae ex, iure velit ratione placeat dicta, fugit, perferendis vitae laudantium autem ad? Harum ea placeat sed nostrum dolore velit, ipsum quo ratione minus amet repellat dolorem. Reprehenderit, quidem.</span><span>Hic totam neque unde praesentium odit quod nihil voluptatem sed repudiandae, cumque aliquam rerum, maxime, tempore magnam enim quas fuga? Fuga sunt voluptate, molestias laboriosam repellendus maxime animi esse amet?</span></p> <!-- p>lorem*6--> <!--아무 단어로 된 문단 6개-->
+
+       <p>정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다. 연소자의 근로는 특별한 보호를 받는다.
+
+        선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다. 모든 국민은 건강하고 쾌적한 환경에서 생활할 권리를 가지며, 국가와 국민은 환경보전을 위하여 노력하여야 한다.      <!--Lorem Ipsum 사이트에서 한글 더미 글을 얻을 수 있다.-->
+        
+        대통령은 헌법과 법률이 정하는 바에 의하여 국군을 통수한다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.</p> 
+
+    </div>
+
+
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>          <!--div>(ul>li*2)*3-->
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>    <!--div>(header>ul>li*2>a)+footer>p-->
+            </ul>
+        </header>
+        <footer>
+            <p></p>
+        </footer>
+    </div> 
+
+
+</body>
+</html>
