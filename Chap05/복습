@@ -1,0 +1,280 @@
+1. 박스모델
+ (1) 콘텐츠(content): 박스의 내용물, 텍스트와 이미지가 나타나는 부분
+ (2) 패딩(padding):콘텐츠 주위의 영역이다. 패딩은 투명하다.
+ (3) 경계(border):패딩과 내용물을 감싸는 경계이다. 경계는 박스의 경계색에 의해 영향을 받는다.
+ (4) 마진(margin): 경계 주의의 영역이다.
+
+ 2. 경계선
+ (1)경계선 스타일은 border-style로 설정할 수 있다.
+ (2) 속성 종류
+    a. none : 경계선 없음
+    b. dotted : 점으로 이루어진 경계선
+    c. dashed : '-' 로 이루어진 경계선
+    d. solid : 일반 선으로 이루어진 경계선
+    e. double : 두줄로 이루어진 경계선
+    f. groove : 경계선만 오목해 보임
+    g. ridge : 경계선만 볼록해 보임
+    h. inset : 오목한 블록
+    i. outset : 볼록한 블록
+
+    (3) 4방향 모든 경계선 다르게 설정하기
+        탑에서 부터 시계방향 순으로 다르게 선을 줄 수 있다.
+        (예시)border-style:dotted solid double dashed
+
+    (4) 경계선 폭 지정하기
+        a. border-width 속성을 이용하면 폭을 지정 할 수 있다.
+        b. 단위는 픽셀, thin (픽셀 1정도로 얇은), medium(픽셀 3정도의 폭),thick(픽셀 5정도의 폭) 중에 하나이다.
+
+    (5) 경계선 색상
+      border-color 속성을 이용하면 색상을 지정 할 수 있다.
+        (예시) border-style:solid;
+               border-color:green;    
+
+    (6) 경계선에 대한 속성을 한 줄로 정의(축약 속성)
+        border : 5px solid red; 
+        (경계선의 두께, 경계선의 스타일, 경계선의 색상)
+
+    (7) 둥근 경계선
+        border-radius 속성을 이용하면 모서리를 둥글게 만들어 줄 수 있으며
+        둥근 코너의 반지름을 설정 할 수 있다. 단위는 %와 px로 나타낸다.
+
+    (8) 경계에 그림자 생성
+        box-shadow 속성을 이용하면 그림자가 있는 경계를 생성할 수 있다.
+        박스의 속성은 
+        box-shadow : 20px 10px 5px #777777;
+        (가로 오프셋, 세로 오프셋, 번지는 정도, 그림자 셋)
+
+    (9) 경계 이미지(잘 안쓰임)
+    border-image 속성을 이용하면 이미지로 경계선을 만들 수 있다.
+    앱 개발의 나인 패치 참고
+
+
+3. 마진과 패딩
+ (1) css에서는 모든 요소의 크기를 width와 height 속성을 이용해 설정 할 수 있다.
+ (2) resize 속성
+    a. 보통 overflow:auto 속성과 함께 사용한다. 
+    b. resize:both 라고 설정하면 높이와 너비를 모두 조정할 수 있게 한다. 
+    c. resize: vertical 라고 설정하면 높이를 조정할 수 있고
+    d. resize: horizontal 라고 설정하면 가로길이의 조절이 가능하다.
+
+(3) 마진 설정하기
+   a. 마진은 가장 외부이며, css에서 설정 가능하다. 
+   b. 속성 
+     ㄱ. auto: 브라우저가 마진을 계산한다.
+     ㄴ. length: 마진을 px,pt,cm 단위로 지정할 수 있다. 디폴트는 0px다.
+     ㄷ. % 마진을 요소 폭의 퍼센트로 지정한다.
+   c. 마진은 음수로 지정 할 수 있으며 이 경우 요소가 중첩된다.
+   d. 마진의 각 변을 별도로 지정하는 방법
+    (예시 1.)
+    margin-top:10px;
+    margin-right:20px;
+    margin-bottom:30px;
+    margin-left:40px;
+
+    (예시 2.) 한줄로 모든 변에 대한 값을 지정
+    margin: 10px 20px 30px 40px;
+    margin:10px;
+
+(4) 패딩 설정하기
+    a. 패딩은 콘텐츠와 경계 사이의 간격이다.
+    b. 패딩의 각 변을 별도로 지정하는 방법
+    (예시 1.)
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+
+    (예시 2.) 한줄에서 모든 변에 대한 값을 지정
+    padding:10px 20px 30px 40px;
+    padding:10px; /*모든 패딩이 10px 로 설정된다.*/
+
+
+4. 박스의 크기 계산
+    (1) 요소의 전체 크기 계산 
+  
+        패딩+경계+마진+콘텐츠 크기
+        (예시)
+        target{
+           width:200px;
+           padding:10px;
+           border:5px solid red;
+           margin: 20px;
+        }
+        일 때 요소의 전체 크기는?
+        200 + (padding+border+margin)*2 
+        내용물이 가운데 있고 양옆으로 요소가 나뉘어져 있기 때문에 *2를 한다.
+
+    (2) margin 속성을 이용한 수평 정렬
+    어떤 html 요소를 화면의 중앙에 위치시키고자 할때 
+      a. 인라인 요소 : text-align속성 이용
+      b. 블록 요소 : <h1>,<p>,<table>,<div>와 같은 블록 요소를
+      margin-left:auto; margin-right; 중앙 정렬
+
+
+
+5. 배경 설정
+    (1) 배경색 설정
+        background-color 속성을 이용한다.
+        (예시)
+        body{background-color : red;}
+        body{background-color : rgb(255,0,0);}
+
+    (2) 배경 이미지 설정 
+        background-image 속성을 이용한다.
+        (예시)
+        body{ background-image: url('back.gif');}
+
+        배경 이미지는 수평이나 수직 방향으로 사진을 반복하면서 칠한다.
+        따라서 수평이나 수직으로만 반복되거나 아얘 반복되지 않게 
+        background-repeat 특성을 이용해 바꿀 수 있다.
+        (예시)
+        body{
+            background-image:url('back.gif');
+            background-repeat:repeat-x; /*x방향으로만 반복한다.*/
+        }
+
+        body{
+            background-image:url('back.gif')
+            background-repeat: no-repeat;
+        }
+       
+    (3) 배경 이미지 부착(고정하거나 같이 움직이거나) 방법
+    background-attachment 속성은 배경 이미지의 부착 방법을 설정한다.
+    a. scroll : 배경이 요소와 같이 스크롤된다. 디폴트 값이다.
+    b. fixed : 배경이 뷰포트에 대하여 고정된다. (스크롤 해도 배경이미지는 움직이지 않는다.)
+    c. local : 요소의 콘텐츠와 같이 스크롤 된다.
+
+    (4) 배경 이미지 위치 설정
+    background-position 속성은 배경 이미지의 위치를 설정한다.
+    위치는 물론 100px 200px과 같이 픽셀 단위 또는 퍼센트 단위로 지정 가능
+
+    background-position : 100px 200px;
+
+    추가로 left top, left center,left bottom
+           right  top, right center, right bottom
+           center top, center center, center bottom
+        설정 가능
+
+
+    (5) 배경에 대한 속성 한 줄로 설정
+        (예시) 
+        body{background:#ffffff url('back.gif') no-repeat right top;}
+            
+            
+            background : #ffffff: 배경색을 흰색으로 설정
+            url('back.gif') : 배경 이미지 설정
+            no-repeat : 반복하지 않음
+            right top : 오른쪽 상단에 표시
+
+
+    (6) 배경 이미지 크기 지정
+        background-size
+
+
+6. 링크 스타일 
+    (1-1) 링크의 상태에 따른 스타일 (앞 챕터에서 언급한 적 있음)
+        a. a:link : 방문되지 않은 링크의 스타일
+        b. a:visited :방문 된 링크의 스타일
+        c. a:hover : 마우스가 위에 있을 때의 스타일
+        d. a:active : 마우스로 클릭되는 때의 스타일
+    (1-2) 반드시 지켜야 하는 규칙
+        ㄱ. a: hover는 a:link와 a:visited 다음에 위치 해야한다.
+        ㄴ. a: active는 a:hover 다음에 위치해야 한다.
+        (예시)
+        <style>
+          a:link
+          a:visited
+          a:hover
+          a:active
+
+    (2) 링크의 다른 스타일
+         링크에 마우스 커서가 위치하면 텍스트 크기나 배경식이 변경되도록 설정 할 수 있다.
+
+    (예시)
+    <head>
+        <style>
+            a.style1:link{color : #ff0000;}
+            a.style1:visited{color:#0000ff;}
+            a.style1:hover{font-size : 150%;} (마우스가 위에 있으면 폰트의 크기가 150% 커진다.)
+        </style>
+    </head>
+    <body>
+        <p><a class="style1" href="index.html" target="_blank">
+    </body>
+
+7. 리스트 스타일
+    (1) 속성  
+        a. list-style : 리스트에 대한 속성을 한 줄로 설정한다.
+        b. list-style-image : 리스트 항목 마커를 이미지로 지정한다.
+        c. list-style-position : 리스트 마커의 위치를 안쪽인지 바깥쪽인지를 지정한다.
+        d. list-style-type : 리스트 마커의 타입을 지정한다.
+
+    (2) 리스트 항목 마커 변경
+    (예시) 
+    ul.style1 {list-style-type : circle;}  빈 원 
+    ul.style2 { list-style-type: square;}    검은 네모
+    ol.style3 { list-style-type: upper-roman;} 로마숫자
+    ol.style4 { list-style-type: lower-alpha;}  알파벳
+
+    (참고) 
+    이미지를 리스트 항목 마커로 사용하려면 list-style-image 속성을 사용한다.
+    ul { list-style-image: url('bullet.png');}
+
+
+
+8. 테이블 스타일
+    (1-1) 테이블의 경계
+        border : 5px solid red;
+        
+        5px : 경계선의 두께
+        solid : 경계선의 스타일
+        red : 경계선의 색상
+    (1-2) 경계선의 순서 설정시 주의사항 
+        순서는 반드시 border-width, border-style, border-color 순서로 적어야 한다.
+
+    
+    (2) 경계 통합
+    border-collapse는 테이블이나 셀의 경계선 표시 방법을 지정하는 속성이다.
+        collapse : 이웃하는 셀의 경계선을 합쳐서 단일선으로 표시한다.
+        separate : 이웃하는 셀의 경계선을 합치지 않고 분리하여 표시한다.
+
+    (3) 테이블의 배경색
+    (예시)
+    <style>
+        td,th{
+            color:white;
+            background-color:green;
+        }
+    </style>
+
+    (4) 테이블의 가로와 세로 길이 지정
+    (예시)
+    <style>
+        table, td, th{ border: 1px solid blue;}
+        table {width: 100%;}
+        th { height : 30px;}
+    </style>
+
+
+    (5) 테이블 텍스트 정렬
+    text-align 속성은 테이블 안의 텍스트 정렬을 설정한다.
+    (예시)
+    <style>
+        table, td, th{border : 1px solid blue;}
+        table { width: 100% }
+        td { text-align: center;}
+
+    (6) 테이블 캡션
+    테이블의 제목과 같은 캡션을 설정을 할 수 있다.
+    (예시)
+    ...
+    <head>
+        <style>
+            caption{caption-side:bottom;}
+        </style>
+    </head>
+
+    <body>
+        <table border="1">
+            <caption> VIP 고객 리스트</caption>
+    ...

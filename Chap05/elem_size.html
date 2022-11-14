@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <style>
+        #target1{
+            width:100px;    /*width와 height를 안주면 content 모양으로 잡힘*/
+            height: 50px;
+            background-color: yellow;
+        }
+
+        #target2{
+            width: 100px;
+            height: auto;
+            background-color: lightgreen;
+            border:1px solid red; 
+            resize:both; 
+            overflow: auto; /*resize,overflow:크기 조정*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <p id="target1">이것은 p요소 입니다.</p>
+    <div id="target2">이것은 div요소 입니다.</div>    
+</body>
+</html>
