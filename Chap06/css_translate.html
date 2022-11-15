@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{width: 50px;
+            height: 50px;
+            margin:10px;
+            border:1px solid black;
+            text-align: center;
+            }
+        #box1{background-color: rgba(0, 255, 255, 0.808);
+               transform: skew(30deg,30deg);} /*(x,y)방향으로 비틀기*/
+        #box2{background-color: rgb(212, 77, 253); 
+            transform: translate(200px,10px);} /*(x,y)이동 시키기*/
+        #box3{background-color: rgb(220, 20, 60);
+        transform:scale(1.5,1.2);}  /*확대*/
+        #box4{background-color: yellowgreen;
+        transform: rotate(45deg);}  /*회전*/
+        #box5{background-color: rgb(255, 115, 0); /*하나에 몰아 넣기*/
+        transform: translate(80px,88px) scale(1.5,1.5)
+                    rotate(-35deg);}
+        #box6{background-color: rgba(0, 128, 0, 0.582);
+                transform: matrix(1.5,0.5,-0.5,0.9,2,2);} /*matrix(a,b,c,d,tx,ty) => (a,d)scale(확대) (c,b)skew(비틀기) (tx,ty)translate(이동시키기)*/
+    </style>
+</head>
+<body>
+    <div id="box1">Box1</div>
+    <div id="box2">Box2</div>
+    <div id="box3">Box3</div>
+    <div id="box4">Box4</div>
+    <div id="box5">Box5</div>
+    <div id="box6">Box6</div>
+</body>
+</html>

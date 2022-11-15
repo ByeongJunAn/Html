@@ -1,0 +1,265 @@
+1. 레이아웃
+    (1) 블록 요소  
+        화면의 한 줄을 전부 차지한다.
+        <h1>, <p>, <ul>, <li>, <table>, <blockquote>, <pre>, <div>, <form>, <header>, <nav>
+
+    (2) 인라인 요소
+        한 줄에 하나씩 
+        <a>, <img>, <strong>, <em>, <br>, <input>, <span>
+
+    (3) css 코드를 이용한 요소 바꾸기 
+        속성 display를 block으로 설정하면 블록으로 설정됨
+        속성 display를 inline으로 설정하면 inline으로 설정됨
+        (예시)
+        div {display; inline;}
+
+    (4) display의 속성
+        a. display:block :블록(block)
+        b. display:inline : 인라인(inline)
+        c. display:none : 없는 것으로 간주 됨
+        d. display:hidden : 화면에서 감춰짐
+
+
+2. 요소 위치 정하기
+    (1) 기본적 위치는 top, bottom, left, right 속성으로 지정한다. 
+        (예시)
+            #target{ top; 100px; left:200px;}
+            => 기준 위치에서 (100,200) 위치에 배치한다.
+    (2) 기본적으로 요소의 위치를 정할 땐 기준 위치가 있어야 위든 아래든 결정 할 수 있는데
+        그러한 그준 위치는 position 속성으로 결정한다.
+        즉, position위치가 있어야 top, bottom, left, right 속성을 쓸 수 있다.
+
+        css에는 4가지의 위치 설정방법이 있는데
+        a. 정적 위치 설정(static positioning): 정상적인 흐름에 따른 배치이다.
+            이 경우 요소의 위치는 top, bottom, left, right 속성의 영향을 받지 않는다.
+        b. 상대 위치 설정(relative positioning) : 정상적인 위치(정적 위치 설정)가 기준점이 된다.
+        c. 절대 위치 설정(absolute positioning) : 컨테이너(전체 페이지) 의 원점이 기준점이 된다.
+        (예시)
+            #two {
+                position : absolute; <!--포지션을 앱솔루트를 주어 절대 위치 설정한다.-->
+                top: 30px;  <!-- 절대 위치로 부터 탑으로부터 30px 떨어뜨린다.-->
+                left : 30px;
+                background-color: yellow;
+                width: 200px;
+                height: 50px;
+            }
+        d. 고정 위치 설정(fixed positioning) : 윈도우의 원점이 기준점이 된다. 
+                                              (스크롤 되어도 고정 되어 있다.)
+    
+    (3) float 속성
+        a. 일반적으로 어떤 요소든지 float 속성을 적용할 수 있다.
+        b. float 요소는 왼쪽이나 오른쪽으로만 배치될 수 있다. 
+      
+    (4) float를 여러 번 적용
+        첫번째 요소를 왼쪽으로 float 설정을 하고 두번째 요소도 왼쪽으로 float 설정을 하면
+        어떻게 될까?
+        만약 화면에 여유가 있다면 이전 요소에 이어서 두번째 요소가 왼쪽으로 배치된다.
+
+    (5) 웹 페이지의 레이아웃을 잡을 때 float를 이용한다.
+        a. float의 경우 비어있는 부분을 채우려고 하기 때문에 
+           float의 속성을 없애면 이러한 자동 채움을 해결 할 수 있다. 
+        (예시)
+        #footer{
+            clear: both;
+        }
+        
+        b. clear의 속성
+            ㄱ. clear:both -> 오른쪽/왼쪽을 취소, 가장 많이 사용
+            ㄴ. clear:left -> 왼쪽을 취소
+            ㄷ. clear:right -> 오른쪽을 취소
+            ㄹ. clear:none -> 기초 값을 clear 값을 설정하지 않은 것과 같다.
+
+    (6) z-index
+        a. 요소가 정상적인 흐름에서 벗어나서 배치 되는 경우에 흔히 겹침이 발생한다.
+        이럴 때 요소의 스택 순서를 정할 때 사용한다. 
+        b. 요소는 양수 혹은 음수의 스택 순서를 갖는다. 
+        (예시)
+        #box1 {
+            z-index : 200;
+        }
+        #box2 {
+            z-index : 100;
+        }
+
+        #box3 {
+            z-index : 0;
+        }
+     
+     (7) 요소의 크기 설정
+     요소의 크기는 width와 height 속성으로 결정된다.
+     min-width, min-height : 요소의 최소크기
+     max-width, max-height : 요소의 최대크기
+    (예시)
+    <style>
+        p { min-width : 100px;
+            min-height : 100px;
+            background-color : yellow;}
+    </style>
+    
+    (8) overflow 속성
+        a. 오버플로우는 자식 요소가 부모 요소의 범위를 벗어났을 때 어떻게 처리할지를
+    지정한다. 
+        b. 속성
+            ㄱ. hidden: 부모 영역을 벗어나는 부분을 보이지 않게 한다.
+            ㄴ. scroll :  부모 영역을 벗어나는 부분을 스크롤 할 수 있게 한다.
+            ㄷ. auto : 자동으로 스크롤바가 나타난다.
+    (예시)
+        <style>
+            #target {
+                border:1px solid black;
+                width: 300px;
+                height : 100px;
+                overflow : scroll; /*넘어 가는 부분은 스크롤 된다.*/
+            }
+        </style>
+
+
+    (9) 학습 내용 정리
+
+        a. position
+            ㄱ. static: 디폴트 위치; 요소는 정상적인 흐름에 따라서 배치된다. 
+                        top/left/bottom/right 속성은 무시된다.
+                relative: 요소는 정상적인 위치에서 오프셋만큼 떨어진 곳에 배치된다.
+                absolute: 요소는 컨테이너 안에서 고정된 위치에 배치된다.
+                fixed: 브라우저 윈도우 안에서 고정된 위치에 배치된다.
+                (페이지가 스크롤 되어도 움직이지 않는다.)
+
+            ㄴ. top, bottom, left, right : 이들 속성은 요소의 위치를 결정한다.
+                                           이들 값은 모두 오프셋이다.
+            ㄷ. width, height : 요소의 너비와 높이를 설정한다.
+            ㄹ. float : 이 속성은 "position:static"의 블록 요소에 사용된다.
+                        이 속성이 사용되면 컨테이너 안 다른 요소가 이 요소를 
+                        감싸며 배치된다.
+                        (이 속성이 사용되면 position과 offset 설정은 모두 사라진다.)
+
+
+3. <div> 요소를 이용한 레이아웃
+     그 방법에는 <div> 요소를 생성하고 요소의 위치를 지정해서 레이아웃을
+    만드는 방법과 HTML의 <nav>, <section>,<aside> 등의 
+    시멘틱 요소(의미적 요소라고도 하며 요소가 자기 스스로 브라우저와 개발자 모두에게 자신이 사용된 
+    의미를 명확히 전달해 주는 요소)를 사용한 레이아웃 방법이 있다. 
+    (예시 : layout1.html 참고)
+
+
+4. 시멘틱 요소(의미적 요소)를 이용한 레이아웃
+    (1)미리 정해진 형식이 있는 요소 이기 떄문에 태그만 잘 써서 사용해주면 된다.
+    (2)태그
+        a. <header> : 문서의 머리말(header)
+        b. <hgroup> : <h1>에서 <h6>요소의 그룹
+        c. <nav> : 내비게이션 링크 (네비게이션 : 메뉴바 같은 것 )
+        d. <article> : 문서의 내용이나 블로그의 포스트
+        e. <section> :문서의 섹션
+        f. <aside>: 사이드 바와 같이 옆에 위치하는 내용
+        g. <footer> : 문서의 꼬리말
+        h. <figure> : 그림이나 도표
+        i. <time> : 날짜와 시간을 표시
+    
+
+    (예시)
+                          <header>
+-----------------------------------------------------                        
+                           <nav>
+-----------------------------------------------------
+<aside>   |              <section>                  |
+          |              <article>                  |
+          |              <section>                  |
+          |              <article>                  |
+          |                  ...                    |
+ -----------------------<footer>--------------------------
+
+ ---------------------------------------------------------
+
+
+ 5. 효과
+    (1) 투명도 
+    opacity 속성을 이용하면 투명도를 조절할 수 있다. 
+    0~1까지의 값으로 구성되어 있으며 0.0이면 완전 투명이고 
+    1.0이면 불투명하다.
+        (예시) 
+        <style>
+            img {opacity : 0.4;}  /*반투명*/
+            img:hover {opacity : 1.0;}  /*불투명*/
+        </style>
+    
+    (2) 가시성
+        a. 뜻: 가시성이란 어떤 요소를 보이거나 안보이게 한다. 속성으로는 
+          visibility가 사용된다.
+    
+        b. 속성
+            ㄱ. hidden : 요소를 보이지 않게 한다.
+            ㄴ. visible(기본값): 요소를 보이게 한다.
+                (예시)
+                    <style>
+                        #a {
+                            visibility: hidden;
+                            border : 1px dotted red;
+                        }
+
+    (3) 전환(transitions)
+        a. 뜻: 하나의 형태에서 다른 형태로 변환되는 효과를 주는 것
+        b. 적용법 
+            ㄱ. 효과를 추가하고 싶은 css 속성을 지정한다.
+            ㄴ. 효과의 지속시간을 지정한다.
+                (예시)
+                transition:width(전환이 되는 속성) 5s(전환 효과의 지속시간);
+            ㄷ. 주의사항
+            만약 지속시간이 지정되지 않으면 0으로 간주되기 때문에 전환 효과가
+            발생하지 않는다. 
+        c. 적용 범위
+            크기 뿐만 아니라 너비, 길이, 회전 등의 변환에도 사용 가능하다.
+            (예시)
+            <style>
+                p{
+                    width: 100px;
+                    height : 50px;
+                    border : 1px solid black;
+                    background : yellow;
+                    transition : width 5s height 5s border 5s, transform 5s;
+                }
+    
+        - (참고) 위 효과는 브라우저마다 실행이 안될 수도 있다. 
+            예를 들어 사파리의 경우가 실행이 안될 수 있는데 이때에
+                transition에 대해 구글 검색하여 찾아보면
+                -webkit-를 쓰면 사용할 수 있다고 한다.
+
+6. CSS3 변환
+    (1) css3 변환 기능(transformation)을 이용해 도형을 이동, 크기 변환, 회전을 할 수 있다.
+    변환은 요소의 크기나 형태, 위치를 변환하는 효과이다. 요소는 2차원 또는 3차원적으로 
+    변환 될 수 있다.
+            <!--각 요소의 ()안에 어떤 단위가 들어가는지 꼭 확인-->
+
+    (2) 속성   
+        기준 위치는 박스의 정상적인 위치가 된다. 
+        transform: translate(10px,10px) - x축으로 10px만큼 , y축으로 10px만큼 평행 이동 한다.
+        transform: rotate(45deg) -45도 만큼 회전
+        transform: scale(2, 1.2) - 크기 변환 - x방향으로 2배 확대, y방향으로 1.2배 확대
+        transform: skew(20deg,10deg) - x축으로 20도 만큼 비틀기, y축으로 10도 만큼 비틀기(찌그러뜨리기) 
+        transform: matrix() - 일반적인 변환
+
+7. 복합 변환
+   (1) 하나의 요소에 여러 가지 변환이 차례대로 적용될 수도 있다. 
+     (예시)
+      div {
+        height:100px; width: 100px;
+        transform: translate(80px, 80px) scale(1.5, 1.5) rotate(45deg)
+     
+    }
+
+    (2) matrix()
+    다른거 필요없이 아래 내용만 알면 된다.
+    matrix (scaleX, skewX, skewY, scaleY, translateX, translateY)
+
+8. 3차원 변환
+    (예시)
+    <style>
+    .container { 
+        background-color : yellow;
+        border: 1px solid black;
+    }
+    .transformed {
+        backface-visibility: visible
+        transform-origin: 50% 42%;
+        transform:perspective(500px) rotateY(59deg) rotateX(0deg);
+    }
+
+9. css3 애니메이션

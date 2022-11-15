@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+   <style>
+    #list{width: 100% ;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    #list td,#list th{
+        border:1px dotted gray;
+        text-align: center;
+
+    }
+    #list th{color: white;
+            background-color: blue;}
+    #list tr.alt td{    /*여기서 alt td로 한칸 띄기는 td후손전체를 가져온다.*/
+        background-color: yellow;
+    }
+   </style>
 </head>
 <body>
-    <table>
+    <table id="list">
         <tr>
-            <td>이름</td>
-            <td>이메일</td>
+            <th>이름</th>
+            <th>이메일</th>
         </tr>
         <tr>
             <td>김철수</td>
             <td>chul@google.com</td>
         </tr>
-        <tr>
+        <tr class="alt">
             <td>김영희</td>
             <td>young@google.com</td>
         </tr>
@@ -21,7 +35,7 @@
             <td>홍길동</td>
             <td>hong@goolge.com</td>
         </tr>
-        <tr>
+        <tr class="alt">
             <td>김수진</td>
             <td>sujin@google.com</td>
         </tr>
