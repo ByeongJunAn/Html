@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html >
-<head>
-    
+<head> 
     <title>튀어오르는 공</title>
+    <style>
+        
+        
+        div{
+            background-color: red;
+            ;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            animation: 5s myball;
+            animation-iteration-count: 10
+        }
+        
+       
+
+        @keyframes myball
+        {
+            0%{
+                left: 0; top:0;
+                animation-timing-function:ease-in;
+            }
+            10%{
+                left: 0px; top:300px;
+                animation-timing-function:ease-out;
+            }
+            20% { 
+                left : 0px; top:50px;animation-timing-function:ease-in;
+            }
+            30% {
+                left :0px; ; top:300px;
+                animation-timing-function:ease-out;
+            }
+            40% {
+                left: 0px; top:120px;  
+                animation-timing-function:ease-in;
+            }
+            50%{
+                left:0px; top:300px;
+                animation-timing-function:ease-out;
+            }
+            60%{left: 0px; top:185px;
+                animation-timing-function:ease-in;
+            }
+            70%{left:0px; top:300px;
+                animation-timing-function:ease-out;
+            }
+            80%{left:0px; top:250px;
+                animation-timing-function:ease-in;
+            }
+            90%{left: 0px; top:300px;
+                animation-timing-function:ease-out;
+            }
+            100%{left: 0px; top:300px;
+                animation-timing-function:ease-in;
+            }
+        }
+    </style>
+   
 </head>
 <body>
+    <div></div>
     
 </body>
 </html>
