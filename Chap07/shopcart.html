@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 3px solid black;
+            border-collapse:collapse;
+        }
+        th,tr,td{border: 1px solid black;}
+        caption{color:  red;}
+    </style>
+</head>
+<body>
+    <table>
+    <caption>Shopping Cart</caption>
+    <tr>
+        <th>품목</th>
+        <th>가격</th>
+        <th>수량</th>
+        <th>합계</th>
+    </tr>
+    <tr>
+        <td>컴퓨터 세트</td>
+        <td>2,000,000원</td>
+        <td><input type="number" name="number"
+            min="1" max="10" step="1"></td>
+            <td><input type="text" size="6" value="0"></td>
+    </tr>
+    <tr>
+        <td>티셔츠</td>
+        <td>50,000원</td>
+        <td><input type="number" name="number"
+            min="1" max="10" step="1"></td>
+            <td><input type="text" size="6" value="0"></td>
+    </tr>
+    <tr>
+        <td>음악파일</td>
+        <td>1,000원</td>
+        <td><input type="number" name="number"
+            min="1" max="10" step="1"></td>
+        <td><input type="text" size="6" value="0"></td>
+    </tr>
+    <tr>
+        <td>영화파일</td>
+        <td>5,000원</td>
+        <td><input type="number" name="number"
+            min="1" max="10" step="1"></td>
+            <td><input type="text" size="6" value="0"></td>
+    </tr>
+</table>
+<input type="button" value="계산">
+<input type="submit" value="구매" />
+<input type="reset" value="초기화"> <br /> 
+
+<a href ="index.html">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{height :100%;
+            
+            background-color: #F3F1E9;}
+        div{border:1px solid black;}
+        legend{
+            
+        }
+        button{
+           
+            display: inline;
+                
+        }
+        label{width: 120px;
+        display:inline-block;
+        
+        
+        }
+    </style>
+</head>
+<body>
+    <legend>회원정보 입력</legend>
+    <div>
+    <label>아이디:</label><input type="email" name="아이디" autofocus required/>
+    <button>중복검사</button><br>
+    <label>패스워드:</label><input type="password" name="password" /><br>
+    <label>패스워드 확인:</label><input type="password" name="password2"> <br>
+    <label>이름:</label><input type="text" name="name"  /><br>
+    <label>휴대폰 번호:</label><input type="tel" name="tel" /> <br />
+    <label>이메일:</label><input type="email" name="email"  /> <br />
+    <label>생일:</label><input type="date" name="date" /> <br />
+    <label>홈페이지:</label><input type="url" name="홈페이지"><br>
+    <label>성별:</label><input type="radio" name="gender" value="male" />남성
+        <input type="radio" name="gender" value="female" />여성 <br />
+          
+    </div>
+        <input type="submit" value="제출" />
+        <input type="reset" value="초기화"> <br /> 
+    </body>
+</html>
