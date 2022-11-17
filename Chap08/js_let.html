@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let과 const</title>
+</head>
+
+<script>
+    let x="outer x"; //let : 범위를 정확히 지킴 (범위를 벗어나면 에러를 발생시킴)
+    {
+        let x ="inner x"; 
+     // let x ="x"; //또 선언해서 쓰는건 var와는 다르게 불가능 하다(redeclare)
+        let y ="inner y";
+        document.write("inner => "+ x+", "+ y+"<br>")
+    }
+
+    document.write("outer => " +x + "<br>")
+    // document.write("outer => " +y + "<br>")
+ 
+    const c =2;
+    // c=5; //Uncaught TypeError: Assignment to constant variable =>const는 상수이므로 값을 변경할 수 없다. 
+    document.write(c+"<br>");
+
+    const origin={x:1, y:2} //const 예외 => 객체 (property) x: number 로 이루어져 있는데 number의 값을 바꾸는건 허용
+    origin.x = 3;
+    document.write(origin.x + ", "+ origin.y+"<br>");
+
+    let txt="";
+    
+    for(let pro in origin) {  //for ... in (let또는 )
+        
+        txt += pro+"= "+ origin[pro] + " ";
+    }
+    document.write(txt);
+</script>
+
+
+<body>
+    
+</body>
+</html>

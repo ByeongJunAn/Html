@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script>
+        function calc() {
+            var x = document.getElementById("x").value; //아이디가 x것의 요소를 갖다 줘
+            var y = document.getElementById("y").value;
+            var sum;
+            sum=parseInt(x) + parseInt(y);
+            document.getElementById("sum").value = sum;
+            var h1=document.getElementById("header1");
+            h1.style.color = "red" //여기서 h1은 바로위에 있는 var h1이다. 
+        }
+    </script>
+</head>
+<body>
+    <h1 id ="header1"> 덧셈 계산기</h1>
+    <form name="myform" action="" method="post">
+        첫번째 정수 : <input id="x"><br>
+        두번째 정수 : <input id="y"><br>
+        합계 : <input id="sum"><br>
+        <input type="button" value="계산" onclick="calc();">
+
+    </form>
+</body>
+</html>

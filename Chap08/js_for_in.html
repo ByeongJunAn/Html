@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myCar= {make: "BMW", model: "X5", year: 2022}; //객체다. 배열아님!
+        var txt="";
+
+        for(var x in myCar) {
+            document.write(x + ":" + myCar[x] + "<br>");
+            txt += myCar[x] + " "; //myCar의 각 번지의 속성(value값)을 하나씩 가져온다.
+        }
+        document.write(txt);
+    </script>
+</body>
+</html>

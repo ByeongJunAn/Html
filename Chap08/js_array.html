@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+        var i;
+        var fruits= new Array();
+        fruits[0] = "Apple";
+        fruits[1] = "바나나";
+        fruits[2] = new Date();
+        fruits[3] = 3.14;
+        fruits.push("abcd");
+        delete fruits[2]; //delete: 공간은 남아있고 값은 지워진다. 따라서 fruits[2]를 호출하면 undefined값이 나온다.
+        
+        for(i=0; i<fruits.length; i++){
+            document.write(fruits[i] + "<br>") 
+        }
+        
+        fruits['a'] = "사과";
+        fruits['b'] = "포도";
+
+        document.write( fruits['a'] + "<br>")
+        document.write( fruits["b"] + "<br>")// "", '' 구분을 안하기 때문에 둘 다 사용 가능
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
