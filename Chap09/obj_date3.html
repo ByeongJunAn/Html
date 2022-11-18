@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트다운 타이머 만들기</title>
+
+    <script>
+        function datesUntilNewYear(){
+            const now = new Date();
+            const newYear = new Date('january 1, ' + (now.getFullYear()+1));
+
+            let diff = newYear - now;
+            diff = diff / 1000;
+            const seconds = Math.floor(diff %60);
+            diff = diff/60;
+            const minute = Math.floor(diff %60);
+            diff = diff/60;
+            const hours= Math.floor(diff % 24);
+            diff= diff / 24;
+            
+            const days = Math.floor(diff);
+
+            const str= ("내년도 신정까지 : " + days + "일, " + hours + "시간, " + minute + "분," + seconds + "초 남았습니다.");
+            // document.write(str)
+            document.getElementById("remaining").innerHTML.str;
+            document.write(str)
+            setTimeout("datesUntilNewYear()", 1000);
+
+
+        }datesUntilNewYear();
+
+        
+
+    </script>
+</head>
+<body>
+    <h1 id="remaining"></h1>
+</body>
+</html>

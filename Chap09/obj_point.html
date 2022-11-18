@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtoType</title>
+</head>
+<body>
+    <script>
+        function Point(xpos,ypos){
+            this.x=xpos;
+            this.y=ypos;
+
+
+        }
+
+        Point.prototype.getDistance=function(){
+            return Math.sqrt(this.x * this.x + this.y*this.y);
+        }
+
+        const p1 = new Point(10,20);
+        const d1 = p1.getDistance();
+        const p2 = new Point(10,30);
+        const d2 = p2.getDistance();
+        p1.toString = function(){
+            return "사각형1 입니다.<br>"
+        }
+        document.write(p1.toString());
+
+        document.write(d1 + "<br>");
+        document.write(d2 + "<br>");
+
+        console.log(p1);
+        console.log(p2);
+
+    </script>
+</body>
+</html>

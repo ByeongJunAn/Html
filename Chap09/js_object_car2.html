@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object2</title>
+</head>
+<body>
+    <script>
+        function Car (model, speed, color){  /*자바의 생성자를 생성하는데 클래스 대신 function을 
+                                             써줬다고 생각하면 편함*/
+            this.model=model;
+            this.color=color;
+            this.speed=speed;
+            this.brake= function(){         //문장마다 생성되기 때문에 ; 로 마감
+                this.speed -= 10; 
+            }
+            this.accel = function(){
+                this.speed += 10;
+            }
+            
+        }
+        const myCar = new Car("520d", 60, "red");
+
+        document.write("모델:  " + myCar.model + " 속도: " + myCar.speed + " 색상: " + myCar.color+"<br>");
+        
+        myCar.brake();
+
+        document.write("모델:  " + myCar.model + " 속도: " + myCar.speed + " 색상: " + myCar.color+"<br>");
+
+        myCar.accel();
+
+        document.write("모델:  " + myCar.model + " 속도: " + myCar.speed + " 색상: " + myCar.color+"<br>");
+
+        myCar.turbo=true;
+        myCar.showModel =function(){
+            alert("모델은 "+ this.model + "입니다. ");
+        }
+        document.write("모델:  " + myCar.model + " 속도: " + myCar.speed + " 색상: " + myCar.color+"터보: " + myCar.turbo + "<br>" );
+        myCar.showModel();
+
+    </script>
+</body>
+</html>

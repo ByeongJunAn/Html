@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <title>object</title>
+</head>
+<body>
+    <script>
+        const myCar = {
+           model : "520d",
+           speed:60,
+           color:"red",
+           brake: function(){this.speed -= 10;},        //한 문장안에 있기 때문에 ,로 마감
+           accel : function(){this.speed += 10;}
+        };
+
+        console.log(myCar);
+        console.log(myCar.color); 
+        myCar.color ="yellow";
+        console.log(myCar.color);
+        myCar.brake();
+        console.log(myCar);
+        myCar.color = "blue";
+        console.log(myCar);
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+1 객체 
+
+    (1) 객체 생성 방법 : 자바스크립트는 클래스라는 개념이 없으며 모든 것은 객체이고 생성자 함수가 클래스의 역할을 흉내낸다.
+
+        a. 내장 객체(built-in object) : 생성자가 미리 작성되어 있다.
+            Date, String, Array 같은 내장 객체가 있다. 
+            또 HTML 문서를 나타내는 객체인 document도 내장 객체라고 할 수있다.
+            (예시)
+            document.write("<p> 이것은 단락입니다 </p>");
+
+
+        b. 사용자 정의 객체(custom object) : 사용자가 생성자를 정의한다. 
+
+            (예시)
+                    function Car(model, speed, color){
+                        this.model = model;
+                        ...
+                        ...
+                        this.brake = function(){
+                            this.speed -=10;
+                        this.accel = function(){
+                            this.speed +=10;
+                        }
+                        }
+                    }
+    
+
+    (2)객체 멤버 사용 : 객체 안의 속성과 메서드를 객체 멤버라 부르는데 이 멤버를 
+                       사용하기 위해서는  '.'(dot) 연산자를 사용한다. 
+        (예시)
+        myCar 라는 이름의 객체 안에 color 속성을 "red"로 변경하는 문장은
+        myCar.color ="red";
+        myCar.color ="brake()";
+        과 같다.
+    
+    (4) 기존의 
+
+
+2. 프로토타입 
+   
+    (1) 뜻 : 자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 객체와 연결되어 있다. 그리고 이것은 마치 객체 지향의 상속 개념과 같이 부모 객체의 프로퍼티 또는 메소드를 상속받아 사용할 수 있게 한다. 이러한 부모 객체를 Prototype(프로토타입) 객체 또는 줄여서 Prototype(프로토타입)이라 한다.
+
+    (2) 자바스크립트의 모든 객체는 prototype 이라는 숨겨진 객체를 가지고 있다.
+         (예시)
+          
+        <script>
+            function Point(xpos, ypos) {
+                this.x = xpos;
+                this.y = ypos;
+
+            }
+            Point.prototype.getDistance = function() {
+                return Math.sqrt(this.x*this.x* + this.y*this.y );
+            }
+
+             var p1 =new Point(10,20);
+             var d1 = p1.getDistance();
+
+             var p2= new Point(10,30);
+             var d2= p2.getDistance();
+
+            document.writeln(d1 + "<br>")
+            document.writeln(d2 + "<br>")
+        <script>
+
+
+        (3) 프로토타입 체인
+        자바 스크립트에서 속성이나 메서드를 참조하면 다음과 같은 순서대로 찾는다.
+            a. 객체 안에 속성이나 메서드가 정의되어 있는지 체크한다.
+            b. 객체 안에 정의도어 있지 않으면 객체의 prototype이 속성이나 메서드를 가지고 있는지 체크한다.
+            c. 원하는 속성/ 메서드를 찾을 때까지 프로토 타입 체인(chain)을 따라서 올라간다. 
+            d. 최종 object까지 올라가서 없으면 오류가 발생한다.
+        
+        이 과정을 프로토타입 체인(prototype chanin) 이라고 한다. 프로토타입 객체는 개별 객체에서 시작해서 생성자의 프로토타입을 통하여 object의 프로토타입까지 연결되어 있다. 
+
+        프로토타입 체인은 _proto_ 속성을 이용해 연결된다. 
+
+        (4) object 객체
+        자바스크립트의 모든 객체는 object객체를 기초로 하여 생성된다. 따라서 객체는 내부에 object객체의 속성과 메서드를 가지고 있다고 생각해도 좋다.
+
+        (5) object 객체의 속성/메서드
+            a. constructor : 
+                    ㄱ.속성으로 생성자 함수를 가리킨다.
+                    ㄴ.var d = new Date();
+                    ㄷ.d.constructor는 Date()와 같다. 
+            b. valueOf() : 메서드로서 객체를 숫자로 변환한다.
+            c. toString() : 메서드로서 객체의 값을 문자열로 변환한다.
+            d. hasOwnProperty() : 전달 인수로 주어진 속성을 가지고 있으면 true 반환
+            e. isPrototypeOf() : 현재 객체가 전달 인수로 주어진 객체의 프로토타입이면 true 반환
+
+            object 객체의 메서드는 하위 객체에서 재정의(자바의 오버라이딩 개념 생각하기)해서 사용할 수 있다.
+                (예시)
+                myCar.toString = function () {
+                    return "새로 생성된 객체입니다."
+                }
+
+                document.write(myCar.toString()); // "새로 생성된 객체입니다"를 출력한다. 
+
