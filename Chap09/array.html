@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+        const myArray = new Array();
+        myArray[0]="apple";
+        myArray[1]="banana";
+        myArray[2]="orange";
+        console.log(myArray);  //['apple', 'banana', 'orange']
+
+        document.write(myArray);
+
+        myArray[99] = "tomato";
+        console.log(myArray);   // (100) ['apple', 'banana', 'orange', empty × 96, 'tomato']
+
+        const myArray2=[1, "banana", {name:"홍길동"}, [10,20,30]];
+        console.log(myArray2);
+
+        const myArray3= new Array("둘리", "또치", "도우너");
+        console.log(myArray3);
+
+        const x = [1,2,3];
+        const y = [4,5,6];
+        const joined = x.concat(y); //concat: x, y 합치기
+        console.log(joined)
+
+        console.log(x.indexOf(3));
+        console.log(myArray3.indexOf("또치")); // myArray3에 있는 또치의 인덱스(배열의 순서)를 알려줘
+
+        myArray3.push("마이콜"); //push : ['둘리', '또치', '도우너', '마이콜'] 의 순서로 맨 뒤로 들어간다
+        console.log(myArray3)
+        myArray3.pop(); // 맨 뒤에 있는 하나 꺼낸다. 
+        console.log(myArray3);
+        myArray3.shift();   //맨 앞에 있는애가 빠짐
+        console.log(myArray3);
+        myArray3.unshift("마이콜");//맨 앞에 넣는다.
+        console.log(myArray3)
+
+        const numArray = myArray2.slice(3);
+        console.log(numArray);
+
+        const s=myArray.join("+");
+        console.log(s);
+
+        function isBigEnough(element,index, array){
+            return (element >=2);
+    }
+
+        const filtered = x.filter(isBigEnough);
+        console.log(filtered);
+
+        const z = [10,11,100,101,1000];
+        let fz = z.filter(function(item, index){
+            if(item %2 ===0 ) return true;
+            else return false;
+        }
+        ); console.log(fz);
+
+        fz =z.filter((item) =>{
+            if(item % 2 === 1) return true;
+            else return false;
+        })
+        console.log(fz);
+
+        const matrix = [
+            [1,2,3], 
+            [4,5,6], 
+            [7,8,9]
+        ];
+        console.log(matrix);
+        console.log(matrix[0].length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

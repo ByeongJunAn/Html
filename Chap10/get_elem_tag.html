@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+    </ul>
+    <script>
+        const list = document.getElementsByTagName('ul')[0];
+        console.log(list)
+        var allItems = list.getElementsByTagName('li');
+        console.log(allItems);
+        for(var i = 0; i <allItems.length; i++) {
+            alert(allItems[i].firstChild.data);
+        }
+    </script>
+</body>
+</html>

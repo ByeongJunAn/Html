@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script>
+        function calc(type){
+            x= Number(document.calculator.input.value);
+
+            switch (type) {
+                case 1 : 
+                    y = Math.sin((x * Math.PI) / 180.0);
+                    break;
+                case 2 : 
+                    y = Math.log(x);
+                    break;
+                case 3 : 
+                    y = Math.sqrt(x);
+                    break;
+                case 4 :
+                    y = Math.abs(x);
+            }
+            document.calculator.output.value = y;
+
+        }
+    </script>
+</head>
+<body>
+    <form name="calculator">
+        입력: <input type="text" name="input"><br>
+        계산결과 : <input type="text" name ="output"><br>
+        <input type="button" value="SIN" onclick="calc(1);"></input>
+        <input type="button" value="LOG" onclick="calc(2);"></input>
+        <input type="button" value="SQRT" onclick="calc(3);"></input>
+        <input type="button" value="ABS" onclick="calc(4);"></input>
+    </form>
+</body>
+</html>

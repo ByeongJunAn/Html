@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var id;
+        function changerColor(){
+            id = setInterval(flashText,500);
+        }
+        function flashText() {
+            var elem = document.getElementById("target");
+            elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+            elem.style.backgroundColor = (elem.style.backgroundColor == "green") ? "yellow" : "green";
+        }
+        function stopTextColor() {
+            clearInterval(id);
+        }
+
+    </script>
+
+</head>
+<body onload="changerColor();">
+    <div id="target">
+        <p>This is a Text.</p>
+    </div>
+    <button onclick="stopTextColor();">중지</button>
+</body>
+</html>
