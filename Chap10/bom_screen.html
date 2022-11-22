@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewport</title>
+</head>
+<body id="target" onload="onLoadDoc();">
+    
+
+    <a href="#" onclick="maxopen('https://www.google.com', 'resize=1, scrollbar=1, status=1'); return false">전체 화면 보기</a> 
+
+    <a href="#" onclick="replace()">이동하기</a> <!--자기 창에서 링크로 이동--> 
+    <br>
+    <form method="POST">
+        <input type="radio" name="r1" value="blue" onclick="changeColor('lightblue')"> 파랑색
+        <input type="radio" name="r1" value="green" onclick="changeColor    
+        //name을 같게 줘야 radio가 적용 된다.
+        ('lightgreen')">초록색
+
+        <p>영어단어 : 
+            <input type="text" id="name" onchange="sub()">
+        </p>
+        <p>입력필드를 벗어나면 소문자로 변경이 됨</p>
+
+        <div style="background-color: rgb(231, 231, 147); width: 200px;"
+        onmouseover="over(this)" onmouseout="out(this)"
+        >마우스를 이 요소 위로 이동하세요</div>
+    </form>
+
+    <button onmousedown="down(this)" onmouseup="up(this)" >눌러보세요</button>
+    
+    <script>
+        function maxopen(url, winatt){
+            const maxwindow = window.open(url, "", winatt);
+            maxwindow.moveTo(0,0);
+            maxwindow.resizeTo(screen.availWidth, screen.availHeight); // 실제 해상도 크기에 맞춰 가져온다
+
+        }
+
+        function replace(){
+            location.replace("http://www.google.com");
+        }
+
+        for(var key in navigator){
+            value = navigator[key];
+            document.write(key + ":" + value +"<br>")
+        }
+
+        function changeColor(c){
+            document.getElementById("target").style.backgroundColor=c;
+        }
+
+        function onLoadDoc(){
+            alert("문서가 로드되었습니다.");
+            document.body.style.backgroundColor = "red";
+        }
+
+        function sub(){
+            const x = document.getElementById("name");
+            x.value = x.value.toLowerCase();
+        }
+
+        function over(elem){
+            elem.style.border="10px solid purple";
+
+        }
+        function out(elem){
+            elem.style.border="";
+        }
+
+        function down(elem){
+            elem.style.backgroundColor ="#ff0000";
+            // button.style.color="pink"
+        }
+
+        function up(elem){
+            elem.style.backgroundColor="#000000";
+            elem.style.color="#ffffff";
+        }
+
+    </script>
+</body>
+</html>

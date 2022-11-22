@@ -96,3 +96,22 @@
 
                 document.write(myCar.toString()); // "새로 생성된 객체입니다"를 출력한다. 
 
+
+
+3. 자바스크립트 내장 객체
+    (1) Data 객체
+            a. 객체 생성: var today = new Date();
+            b. Data 객체 생성자 
+            c. Data 객체의 생성자는 객체를 생성하는 4가지의 방법이 있다. 
+                Date 객체를 생성할 때 문자열을 인수로 줄 수 있고 정수를 줄 수도 있다.
+            
+            new Date() // 현재 날짜와 시간을 출력한다.
+            new Date(milliseconds) // 1970/01-01 이후의 밀리초
+            new Date(dateString) // 다양한 문자열 
+            new Date(year, month, date[, hours[, minutes[, seconds[,ms ]]]])
+
+            var d1 = new Date(2013, 7, 24);
+            var d2 = new Date(2013, 7, 24, 18, 30, 0);
+            var d2 = new Date(2013, 7, 24, 18, 30, 0, 0);
+
+            

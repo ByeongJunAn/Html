@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <script>
+        var expression="";
+        function add(c){
+             expression=expression+c;
+             document.getElementById("display").value=expression;   //
+        }
+
+        
+        function compute(){
+            document.getElementById("display").value=eval(expression);
+        }
+        function clearDisplay(){
+            expression="";
+            document.getElementById("display").value="0";
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <form>
+        display <input id="display" type="text" value="0" size="30">
+    <br>
+    <input type="button" name="7" value="7" size="5" onclick="add('7')">
+    <input type="button" name="8" value="8" size="5" onclick="add('8')">
+    <input type="button" name="9" value="9" size="5" onclick="add('9')">
+    <input type="button" name="/" value="/" size="5" onclick="add('/')"> <br>
+    <input type="button" name="4" value="4" size="5" onclick="add('4')">
+    <input type="button" name="5" value="5" size="5" onclick="add('5')">
+    <input type="button" name="6" value="6" size="5" onclick="add('6')">
+    <input type="button" name="*" value="*" size="5" onclick="add('*')"> <br>
+    <input type="button" name="1" value="1" size="5" onclick="add('1')">
+    <input type="button" name="2" value="2" size="5" onclick="add('2')">
+    <input type="button" name="3" value="3" size="5" onclick="add('3')"> <br>
+    <input type="button" name="+" value="+" size="5" onclick="add('+')"> 
+    <input type="button" name="0" value="0" size="5" onclick="add('0')"> 
+    <input type="button" name="-" value="-" size="5" onclick="add('-')"> <br>
+    <input type="button" name="clear" value="Clear" onclick="clearDisplay()">
+    <input type="button" name="enter" value="Enter" onclick="compute()">
+</form>
+</body>
+</html>

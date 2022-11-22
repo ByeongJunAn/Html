@@ -1,0 +1,91 @@
+
+   
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title> 
+        <script type="text/javascript" src="/실습/회원가입2.js"></script>
+    </head>
+    <body>
+        <fieldset>
+            <legend style="text-align:center ;">회원가입</legend>
+            <table>
+                <tr>
+                    <th>아이디</th>
+                    <th><input id="ID" type="text" required></th>
+                    <th><input id="idCheck" type="button" value="아이디 확인" onclick="checkId()"></th>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <th><input id="pass1" type="password" required></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <th><input id="pass2" type="password" required></th>
+                    <th><input id="passCheck" type="button" value="비밀번호 확인" onclick="checkpass()"></th>
+                </tr>
+                <tr>
+                    <th>전화번호 입력</th>
+                    <th>
+                        <form action="">
+                            <select name="tell1" id="tell1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="017">017</option>
+                            </select>-
+                            <input id="tell2" type="text" maxlength="4" size="2" onkeyup="nexttap(4,'tell2',tell3)" required>-
+                            <input id="tell3" type="text" maxlength="4" size="2" required>
+                        </form>
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <th><input type="text" id="name" maxlength="3"></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>주민등록번호</th>
+                    <th>
+                        <input type="text" id="juminnum1" maxlength="6" size="5" onkeyup="nexttap(6,'juminnum1',juminnum2)">-
+                        <input type="text" id="juminnum2" maxlength="1" size="1" onkeyup="nexttap(1,'juminnum2',email1)">******
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>이메일 입력</th>
+                    <th>
+                        <input type="text" id="email1" maxlength="6" size="4">@
+                            <select>
+                                <option value="google.com">google.com</option>
+                                <option value="nate.net">nate.net</option>
+                                <option value="naver.com">naver.com</option>
+                            </select>
+                    </th>
+                    <th></th>
+                </tr>
+                
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+            <button type="submit" onclick="submit12()">제출</button>
+        </fieldset>
+    </body>
+    </html>

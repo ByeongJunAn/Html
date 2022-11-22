@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼의 공백 검증</title>
+</head>
+<body>
+    <h3>회원가입</h3>
+    <form action="#">
+        <!-- 이름:  <input type="text" id="name" onblur="checkBlank(this)"><br> -->
+        이름:  <input type="text" id="name" name="name" onchange="checkBlank(this)"><br>
+        <div id ="msgname"></div>
+      
+        주소: <input type="text" id="addr" name="addr" onclick="display(this.form)"><br>
+        <div id ="msgaddr"></div>
+        생일: <input type="date" id="birthday" name="birthday"><br>
+        <div id ="msgbirthday"></div>
+        아이디(6~8자): <input type="text" id="username"><br>
+        <div id="msg"></div>
+        이메일: <input type="email" id="email"><br>
+        휴대폰: <input type="tel" id ="phone"><br>
+        <input type="submit" onclick="checkForm(this.form)" value="확인"><br>
+    </form>
+
+    <script>
+        function checkBlank(elem){
+            if(elem.value.length < 2){
+                alert("이름은 2자 이상 넣어주세요");
+                 setTimeout(function(){
+                elem.focus()
+                 },10);
+               
+                
+            }
+           return true;
+        }
+        
+        function checkForm(form){
+           const username=document.getElementById("username").value;
+
+
+        //     if( username.length==0){
+        //         document.getElementById("msg").innerHTML="아이디를 입력하세요.";
+        //         document.getElementById("username").focus();
+        //     } 
+        //    else if(!(username.length >5 && username.length <9)){
+        //     document.getElementById("msg").innerHTML = "아이디는 6~8자 사이로 넣어주세요";
+        //     console.log(username);
+        //    }
+        //    console.log(form["birthday"].value);
+
+
+
+           if(form["name"].value.length == 0){
+            document.getElementById("msgname").innerHTML = "이름을 입력하세요";
+           }
+           
+           if(form["addr"].value.length == 0){
+            document.getElementById("msgaddr").innerHTML = "주소를 입력하세요";
+           }
+
+           if(form["birthday"].value.length == 0){
+            document.getElementById("msgbirthday").innerHTML = "생일을 입력하세요";
+           }
+        }
+
+        function display(form) {
+            alert(form["addr"].value);
+
+        }
+    </script>
+</body>
+</html>
