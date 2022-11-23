@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkNumeric(elem, email, msg){
+            // var exp= /^[a-zA-Z0-9]+$/;
+            var exp= /^[0-9]+$/;
+            let exp_email = /^[\w\-\.\]+\@[a-zA-Z0-9\.\-]+.[a-zA-Z0-9]{2,}$/;
+            exp_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,}$/;
+            
+            if (elem.value.match(exp)){
+                // return true;
+            } else{
+                alert(msg);
+                elem.focus();
+                return false;
+            }
+
+            if(email.value.match(exp_email)){
+                // return true;
+            } else {
+                alert("이메일을 양식에 맞게 입력하세요.");
+                elem.focus();
+                return false;
+            }
+        }
+
+    </script>
+
+<form>
+    전화번호 (-없이 입력): <input type ='text' id="phone">
+    이메일: <input type="email" id="email">
+    <input type="button" onclick="checkNumeric(document.getElementById('phone'), document.getElementById('email'), '숫자만 입력하세요!')" value='확인'>
+    
+</form>
+
+
+</body>
+</html>

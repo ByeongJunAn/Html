@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq mouse event</title>
+    <style>
+        div.out{
+            width:300px;
+            /* height: 60px; */
+            background-color: yellow;
+            padding: 10px;
+        }
+        div#log{
+            width: 300px;
+            height: 60px;
+            padding : 20px;
+        }
+
+        body{background-color: #eef;}
+        div{padding: 20px;}
+    </style>
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+    <div class="out">
+        <p>마우스를 여기로 움직이세요.</p>
+        <p>0</p>
+    </div>
+    <p></p>
+    아이디 : <input type="text" name="name"><br>
+    <div id="log"></div>
+    <script>
+        let i = 0;
+        $("div.out").mouseover(function(){
+            $("p:first", this).text("mouse over");
+            $("p:last, this").text(++i);
+        });
+
+        $("input").focus(function(){
+            $(this).css("background-color", "yellow")
+        });
+        $("input").blur(function(){ //blur: 포커스 잃으면
+            $(this).css("background-color", "white");
+
+        }
+        );
+
+        // $("input").on({
+        //     focus: function(){
+                
+        //     },
+        //     blur: function(){       //같은 태그를 참조한다면 focus와 blur를 한 문장에 쓸 수 있다.
+
+        //     }
+        // });
+
+        $(document).mousemove(function(e){
+            $("#log").text("e.pageX: "+ e.pageX + ", e.pageY: " + e.pageY);
+        });
+    </script>
+</body>
+</html>

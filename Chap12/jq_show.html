@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery animation</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .dog, #dog2 {
+            display: none;
+            position: relative;
+            width:"120px" ;
+            height:"100px" ;
+            margin-top:10px;
+        }
+        #show{
+            display: block;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <img id="dog" src="/Chap06/chap06/pome.png" alt="dog" style="display:none">
+    <button id="show">Show it</button>
+    <button id="fadeIn">fade it</button>
+    <button id="fadeOut">fadeOut</button><br>
+    <img id="dog2" src="/Chap06/chap06/lion.png" alt="dog2"> 
+    <script>
+        // $(function(){
+        //     $("button").click(function(){
+        //         $("#dog").show(3000); //show : 한번
+            
+        //     });
+        // });
+
+        $(function(){
+            $("#show").click(function(){
+                $("#dog").toggle().animate({left:'100px', opacity:"0.5", width:"150px"}); //toggle : 수동으로 누르면서 반복가능
+            
+            });
+            $("#fadeIn").click(function(){
+                $("#dog2").fadeIn('slow');
+            })
+            $("#fadeOut").click(function(){
+                $("#dog2").fadeout('slow');
+            })
+        });
+    </script>
+</body>
+</html>
