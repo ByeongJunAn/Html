@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/네카라쿠배_2조/css/ahn.css"></link>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 </head>
 <body>
+    
     <div id="temp123">
         <header>
             header
@@ -24,13 +27,47 @@
         </nav>
         </div>
         <div id="temp12"></div>
-    <main>main
-       <img src="/네카라쿠배_2조/갤러리 사진 모음/" id="photo1">사진1</img>
-       <img src="" id="photo2">사진2</img>
-       <img src="" id="photo3">사진3</img>
-       <img src="" id="photo4">사진4</img>
-       <img src="" id="photo5">사진5</img>
-       <img src="" id="photo6">사진6</img>
+
+
+    <main>
+
+
+        <div id="slideShow">
+            <ul class="slides">
+              <li><img id="photo1" src="/네카라쿠배_2조/image/main에 보여질 사진/main_family.jpg"  height="100%" width="100%"> </li>
+              <li><img id="photo2" src="/네카라쿠배_2조/image/main에 보여질 사진/main_studio.jpg"  height="100%" width="100%" > </li>
+              <li><img id="photo3" src="/네카라쿠배_2조/image/main에 보여질 사진/main_outdoor.jpg" height="100%" width="100%" ></li>
+              <li><img id="photo4" src="/네카라쿠배_2조/image/임시주제_smile/happy10.jpg" ></li>
+            </ul>  
+            <p class="controller">
+              
+              <!-- &lang: 왼쪽 방향 화살표
+              &rang: 오른쪽 방향 화살표 -->
+              <span class="prev">&lang;</span>  
+              <span class="next">&rang;</span>
+            </p>
+          </div>
+          <script src="/네카라쿠배_2조/js/ahn.js"></script>
+
+
+          <div id="slideShow">
+    <ul class="slides">
+      <li><img src="image/flower.jpg" alt=""></li>
+      <li><img src="image/fox.jpg" alt=""></li>
+      <li><img src="image/lightning.jpg" alt=""></li>
+      <li><img src="image/moon.jpg" alt=""></li>
+      <li><img src="image/nature.jpg" alt=""></li>
+      <li><img src="image/space.jpg" alt=""></li>
+    </ul>
+    <p class="controller">
+      <!-- &lang: 왼쪽 방향 화살표 &rang: 오른쪽 방향 화살표 --> 
+      <span class="prev">&lang;</span> 
+      <span class="next">&rang;</span>
+    </p>
+  </div>
+  <script src="JS/slideShow.js"></script>
+
+
     </main>
     <footer>footer
         <p>여기는 푸터입니다.</p>
