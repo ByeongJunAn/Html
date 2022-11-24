@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+
+    <hr>
+    책 검색 : <input type="text" id="bookname">
+    <button>검색</button>
+    
+
+
+    <script>
+        
+
+
+
+        
+     $(() => {
+            $(":button").click(() => { 
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: {
+                        query: $("#bookname").val(),
+                    },
+                    headers: {
+                        Authorization: "KakaoAK bf1eb9e572f0ecc7b22a41f2f258a98c"
+                    },
+                }).done(function(msg){
+                    console.log(msg)
+                    $("p").append(msg.documents[2].title)
+                    $(".thumbnail").append('<img src="' + msg.documents[2].thumbnail + '"/>')
+                })
+            })
+        })
+
+ </script>
+
+        
+</head>
+<body>
+    <h1>
+        API Practice
+    </h1>
+    <h2>KaKao API를 이용한 도서 정보 가져오기</h2>
+    <hr>
+    <div class="container">
+        <div class="thumbnail">
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

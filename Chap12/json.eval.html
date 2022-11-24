@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json parse</title>
+<style>
+    p{
+        background-color: blueviolet;
+    }
+</style>
+
+</head>
+<body>
+    <h1>학생명단</h1>
+    <p> 이름: <span id="name"></span>
+        나이: <span id="age"></span>
+    </p>
+
+    <script>
+        const s= '['+ 
+        '{"name":"Hong","age" :"21"},' +
+         '{"name":"Kim","age" :"22"},' +
+         '{"name":"Pak","age" :"23"}]';
+
+         let students = JSON.parse(s);
+         students[1].name = "Lee";
+
+         for(let i=0; i<students.length;i++){
+            document.getElementById("name").innerHTML = students[i].name;
+            document.getElementById("age").innerHTML = students[i].age;
+            
+
+         }
+    </script>
+</body>
+</html>

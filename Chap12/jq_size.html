@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass를 이용한 요소의 크기 바꾸기</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <style>
+        div{
+            width:70px;
+            height: 50px;
+            margin: 10px;
+            display:inline-block;
+            background-color: aquamarine;
+        }
+
+        .next{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+    <div id="div5">5</div>
+
+    <script>
+     
+        // $(function(){
+    //         let divWidth=50
+    //         $("div").click(function(){
+    //         $(this).width(divWidth).addClass("next");
+    //         divWidth-=10;
+    //     });
+    // });
+    // $(document).ready(function(){
+    //         var modWidth=10;
+
+    //         $("#div1").click(function(){
+    //             $(this).width(modWidth).addClass("next");
+    //             modWidth -=10;
+    //         })
+    //     })
+
+    // $(document).ready(function(){
+    //     var modWidth=50;
+    //     $("#div2").click(function(){
+    //         $(this).width(modWidth).addClass("next");
+    //         modWidth -=10;
+    //     })
+    // })
+
+   
+
+    // $(document).ready(function(){
+    //     var modWidth=20;
+    //     $("#div3").click(function(){
+    //         $(this).width(modWidth).addClass("next");
+    //         modWidth -=10;
+    //     })
+    // })
+
+    // $(document).ready(function(){
+    //     var modWidth=30;
+    //     $("#div4").click(function(){
+    //         $(this).width(modWidth).addClass("next");
+    //         modWidth -=10;
+    //     })
+    // })
+
+    // $(document).ready(function(){
+    //     var modWidth=40;
+    //     $("#div5").click(function(){
+    //         $(this).width(modWidth).addClass("next");
+    //         modWidth -=10;
+    //     })
+    // })
+    // 
+    
+    // $("div").click(function(){
+    //     let divWidth = $(this).width()
+    //     console.log($(this).width())
+    //     divWidth -=10
+    //     $(this).width(divWidth).addClass("next")
+    // });
+
+
+    $("div").click(function(){
+        $(this).width($(tihs).width()-10 ).addClass("next")
+    });
+
+
+    </script>
+</body>
+</html>

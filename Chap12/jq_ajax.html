@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first ajax</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!--https의 s는 프론트에서 서버에 넘길때 암호로 넘긴다-->
+    
+
+    <style>
+        div{
+            width: 300px;
+            height:  auto;
+            min-height: 50px;
+            border : 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="target"></div>
+    <button type="button" onclick="getFromSever()">GET DATA </button>
+    <script>
+        function getFromSever(){
+            let req;
+            if(window.XMLHttpRequest){
+                req = new XMLHttpRequest();
+                console.log(req);
+            }else {
+                req = new ActiveXObject("Microsoft.XMLHttp");
+            }
+
+            req.onreadystatechange = function(){
+                if(req.readyState == 4 && req.status == 200){
+                    document.getElementById("target").innerHTML = req.responseText;
+                }
+            }
+
+            req.open("GET", "test.txt", true); //true : 비동기로 작업을 처리 하겠다
+            req.send();
+        }
+        $(function(){
+            $("button").click(function(){
+                $("#target").load("file.txt");
+            });
+        });
+    </script>
+   
+
+
+
+</body>
+</html>

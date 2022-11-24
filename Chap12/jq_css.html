@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            margin:10px;
+        }
+    div{ width : 60px; height:60px;}
+    </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+</head>
+<body>
+    <div id="div1" ></div>
+    <script>
+        $(function(){
+            $("#button1").click(function(){
+                var color = $("#div1").css("background-color");
+                console.log(color);
+                $("#result").text("background-color:" + color);
+            });
+            $("#button2").click(function(){
+                $("#div1").css("background-color","red");
+            });
+        });
+    </script>
+    <button id="button1">css 가져오기</button>
+    <button id="button2">css 바꾸기</button>
+    <p id="result">여기에 결과가 표시됩니다.</p>
+</body>
+</html>
