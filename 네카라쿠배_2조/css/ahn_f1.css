@@ -32,3 +32,13 @@ img:hover{opacity: 1.0;}
 
 #btn1:active {
     background-image: url(/네카라쿠배_2조/image/family/family1.jpg);}
+
+    .wrapper img { /* hover 뒤 애니메이션 */
+        transform: scale(1.0); /* 이미지 확대 */
+        transition: transform .5s; /* 시간 설정 */
+    }
+     
+    .wrapper img:hover {    /* hover 시 애니메이션 */
+        transform: scale(1.5);   /* 이미지 확대 */
+        transition: transform .5s;  /* 시간 설정 */
+    }
