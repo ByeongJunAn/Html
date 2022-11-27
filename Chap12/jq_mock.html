@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOCK data 예제</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"MOCK_DATA.json",
+                dataType:"json",
+                success:function(data){
+                    if(data.length>0){
+                        let tb=$("<table />");
+                        
+                        for(let i in data){
+                            const row= $("<tr />").append(
+                                $("<td />").text(data[i].id),
+                                $("<td />").text(data[i].first_name),
+                                $("<td />").text(data[i].last_name),
+                                $("<td />").text(data[i].email),
+                                $("<td />").text(data[i].gender),
+                                $("<td />").text(data[i].ip_address),
+                                    );
+                                    tb.append(row);
+                        }
+                       $(".wrap").append(tb);
+                        
+                    }
+                }
+        });
+        })
+    </script>
+
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>

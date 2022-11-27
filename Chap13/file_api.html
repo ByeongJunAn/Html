@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="input" name="input" multiple >
+    <button id="readfile" onclick="readFile()">파일읽기</button><br>
+    <textarea name="result" id="result" cols="60" rows="10"></textarea>
+    <textarea name="info" id="info" cols="60" rows="5"></textarea>
+
+
+    <script>
+        function readFile(){
+            if(!window.File || !window.FileReader){
+                alert("File api가 지원되지 않아요");
+                return;
+            }
+            const files =document.getElementById("input").files; 
+            if(!files.length){
+                alert("파일을 선택하세요.");
+                return;
+            }
+            let output ="";
+            for(let i = 0, f; f=files[i]; i++){
+                output += f.name + "\n";
+                output += f.size + "\n";
+                output += f.type + "\n";
+                output += f.lastModifiedDate + "\n";
+
+            }
+            document.getElementById('info').value  = output;
+
+            const file=files[0];
+            const reader = new FileReader();
+            reader.onload =function(){
+                document.getElementById("result").value = reader.result;
+            };
+            reader.readAsText(file,"UTF-8");//한글처리를 위해 euc-kr 사용
+
+        }
+        
+    </script>
+
+
+</body>
+</html>
