@@ -8,73 +8,83 @@
     <title>Document</title>
 
     <!-- css 링크연결 -->
+    <link rel="stylesheet" href="../css/main_ver5.css">
     <link rel="stylesheet" href="../css/ahn.css">
-    <!--  -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-   
     
+    <!-- 제이쿼리 연결  -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/main_ver5.js"></script>
+    <script src="../js/ahn.js"></script>
 
 </head>
 
-<body>
-    
-
+<body id="body_ratio" onscroll="scrollMove()" onload="GBI()">
     <!-- hearder_nav -->
     <div id="fix_header_nav">
-        <header>
-            <h1>NTLCB
-                <div>
-                    <div></div>
-                </div>
-            </h1>
+        <header class="header_change">
+            <!-- 상단 login/mypage/cart section 만들어봄 -->
+            <div id="section_var">
+                <div id="cart"><a href="#">Home</a></div>
+                <div id="login"><a href="#">Login</a> </div>
+                <div id="mypage"><a href="#">MyPage</a></div>
+            </div>
+            <!-- 페이지 로고 추가 -->
+            <div id="logo">
+                <a href="../main_ver5.html"><img src="../image/logo.png"></a>
+            </div>
         </header>
         <nav>
             <ul>
                 <li><a href="#">소개</a></li>
                 <li><a href="#">서비스</a></li>
                 <li><a href="#">갤러리</a></li>
-                <li><a href="#">문의하기</a></li>
+                <li><a href="../mechuri_ver3.html">문의하기</a></li>
             </ul>
         </nav>
+    </div>
+    <div id="fix_main">
+        <!-- <video class="background" autoplay muted loop width="100%">
+            <source src="../video/background1.mp4">
+            배경을 찾을 수 없습니다.
+        </video> -->
     </div>
     <!--  -->
 
     <!-- main구간 -->
-    <div id="fix_main"> </div>
-    <div id="fix_footer">
-    <main>main
+    
+    <main>
         <aside>
-            
             <div style="text-align:center">
                 <h1> 베스트 사진 </h1>
                 
               </div>
               
-              <!-- The four columns -->
+              <!-- [강아지 클릭시 아래쪽으로 확대시켜 나타내기] -->
+
               <div class="taprow">
                 <div class="tapcolumn">
-                  <img src="../image/내부/black2.jpg" alt="blackdog1"  onclick="myFunction(this);">
+                  <img src="../image/내부/black1.jpg" alt="blackdog1"  onclick="myFunction(this);">
                 </div>
                 <div class="tapcolumn">
-                  <img src="../image/내부/black1.jpg" alt="blackdog2"  onclick="myFunction(this);">
+                  <img src="../image/내부/black2.jpg" alt="blackdog2"  onclick="myFunction(this);">
                 </div>
                 <div class="tapcolumn">
-                  <img src="../image/내부/black4.jpg" alt="blackdog3" onclick="myFunction(this);">
+                  <img src="../image/내부/black3.jpg" alt="blackdog3" onclick="myFunction(this);">
                 </div>
                 <div class="tapcolumn">
-                  <img src="../image/내부/black7.jpg" alt="blackdog4" onclick="myFunction(this);">
+                  <img src="../image/내부/black4.jpg" alt="blackdog4" onclick="myFunction(this);">
                 </div>
               </div>
               
               <div class="tapcontainer">
                 <span onclick="this.parentElement.style.display='none'" class="tapclosebtn">&times;</span>
-                <img id="tapexpandedImg" style="width:100%">
+                <img id="tapexpandedImg">
                 <div id="tapimgtext"></div>
               </div>
                 
 
               
-              <!-- The App Section -->
+              <!-- 첫번째 박스 -->
               <div class="container">
                 <div class="row">
                   <div class="column-66">
@@ -90,7 +100,7 @@
                 </div>
               </div>
               
-              <!-- Clarity Section -->
+              <!-- 두번째 박스 -->
               <div class="container" style="background-color:#f1f1f1">
                 <div class="row">
                   <div class="column-33">
@@ -108,7 +118,7 @@
                 </div>
               </div>
               
-              <!-- The App Section -->
+              <!-- 세번째 박스 -->
               <div class="container">
                 <div class="row">
                   <div class="column-66">
@@ -124,7 +134,7 @@
               </div>
               
 
-              <!-- Clarity Section -->
+              <!-- 네번째 박스 -->
               <div class="container" style="background-color:#f1f1f1">
                 <div class="row">
                   <div class="column-33">
@@ -153,14 +163,11 @@
         </aside>
     </main>
     <!--  -->
-    </div>
+
     <!-- footer -->
     <footer>footer
         <p>여기는 푸터입니다.</p>
     </footer>
-
-    <!--  -->
 </body>
 
 </html>
-

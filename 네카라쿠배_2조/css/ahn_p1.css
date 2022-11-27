@@ -80,7 +80,7 @@ img:hover {opacity: 1.0;}
   
   
 }
-/* 모달창  */
+/* 모달창 */
 .modal {
   margin: auto;
   display: block;
@@ -208,7 +208,7 @@ img:hover {opacity: 1.0;}
 
 }
 
-.ccc{
+.caption_text_center{
   width: 100%;
   display: flex;
     justify-content: center;
@@ -240,23 +240,19 @@ img.hover-shadow {
 }
 
 
-
-#modal_main_img{
-  width: 500px;
-  height: 500px;
+/*모달 내에 있는 메인 사진의 크기 조절*/
+#modal_main_img_size{
+  width: 900px;
+  height: 600px ;
  
 }
 
 
 
-/* #Modal_img{ */
-
-  /* width: 10px;
-  height: 50px;
-} */
 
 
-#aaaa{
+
+#modal_main_img{
   width: 100%;
   height: 100%;
   display: flex;
