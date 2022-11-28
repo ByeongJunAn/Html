@@ -16,6 +16,8 @@ function GBI() {
     setTimeout(change_img1, 2000);
 };
 
+
+//[메인 페이지에 들어갈 갤러리 구역에 병준 링크 추가하기]
 function change_img1() {
     $("#div_half_division2").css({ "background": "url(../image/BI_sea_dog.jpg)" });
     $("#div_half_division2").css({ "background-size": "100% 100%" });
@@ -36,6 +38,9 @@ function change_img3() {
     //$('.linkButton').prop('href', 변경할 값)
     setTimeout(change_img1, 2000);
 };
+
+
+
 
 // 숫자들 변경
 
@@ -69,9 +74,40 @@ function div_left_move() {
 function visible_p() {
     $(".p_check_v").css('display', 'block');
 }
+// 네비 상단바 고정
+function scrfix() {
+    $(window).scroll(() => {
+        var temp = $(window).scrollTop();
+        var temp1 = 115 - temp;
+        if (temp1 > 0) {
+            $("#fix_header_nav").css('margin-top', temp1);
+        } else {
+            $("#fix_header_nav").css('margin-top', 0);
+        }
+    })
+}
+function typing_main() {
+    var arr0 ="사진을 정말 예쁘게 찍어줘요!"
+    var arr1 ="서비스가 너무 친절해요~";
+    var arr2 ="우리 강아지를 가족처럼 잘 해줘요!";
+    var arr3 ="한번 이용해보세요!";
+    var arr4 ="이번 프로젝트 만점 받고 싶어요!";
+    var arr5 ="컨셉 사진도 잘 찍어줘요!";
+    var arr6 ="강아지 간식도 구비되어 있어요!";
+    var arr7 ="여기 직원분들이 전부 전문가 같아요!";
+    const text = document.getElementById("p_review");
+    let i = 0;
 
-
-
+    function typing(n) {
+        let txt = arr0[i++];
+        text.innerHTML += txt;
+        if (i > arr0.length) {
+            text.textContent = "";
+            i++;
+        }
+    }
+    setInterval(typing, 300);
+}
 /*------------------------------------------*/
 /*이미지 모달*/
 function myFunction(imgs) {

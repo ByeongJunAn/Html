@@ -1,290 +1,293 @@
+/* ver6 - 상단 login 섹션 추가 , header 로고 추가 -> h1삭제, fix-main에 이미지 추가*/
+
 /* header 텍스트 - KOFIH이종욱체 */
 @font-face {
-    font-family: 'KOFIHDrLEEJWTTF-B';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'KOFIHDrLEEJWTTF-B';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 /* 그 외 텍스트 - 나눔스퀘어 네오 */
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 /* 전체 픽셀 고정*/
 #body_ratio{
-    max-width: 1920px;
-    max-height: 1080px;
-    min-width: 1366px;
-    min-height: 768px;
-    height: 100%;
-    width: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+  min-width: 1366px;
+  min-height: 768px;
+  height: 100%;
+  width: 100%;
+  /* background-image: url(../image/고개돌린\ 개.jpg); */
 }
 .background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1150px;
-    width: 100%;
-    z-index: -1000;
-    opacity: 0.9;    /*투명도*/
-    object-fit: cover;
-    justify-content: center;
-    /* padding-left: 30%; */
-    /* margin-left: 300px; */
-    /* margin-right: -300px; */
-    /* border: 1px solid red; */
-    /* background-size: 200px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1150px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;    /*투명도*/
+  object-fit: cover;
+  justify-content: center;
+  /* padding-left: 30%; */
+  /* margin-left: 300px; */
+  /* margin-right: -300px; */
+  /* border: 1px solid red; */
+  /* background-size: 200px; */
 
-    
-    /* &__content {
-        height: 100%;
-        width: 100%;
-        object-fit: cover; 
-        
-    } */
+  
+  /* &__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; 
+      
+  } */
 }
 
 /* fix 고정시키는 id */
 #fix_header_nav{
-    position: fixed;
-    width: 100%;
-    z-index: 0;
-    background-color: transparent;
-    font-family: 'KOFIHDrLEEJWTTF-B';
-    border: 1px solid rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  font-family: 'KOFIHDrLEEJWTTF-B';
+  border: 1px solid rgb(160, 160, 160);
+  margin-top: 115px;
 }
 
 /* hearder + nav 와 main 을 분리하기위한 id */
 #fix_main{
-    /* position: fixed; */
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 500px;
-    /* background-color: green; */
-    z-index: -200;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-size: 100% 100%;
+  background-image: url(../image/mechuri_강아지1.jpg);
 }
 
 /* header 적용 */
 .header_change{
-    border-bottom: 1px solid rgb(0, 0, 0);
-    /* 크기 조정 */
-    width: 100%;
-    height: 80px;
-    /* header color 추가 */
-    /* background-color: #C8DBBE; */
-    /* header font 추가 */
-    font-family: 'KOFIHDrLEEJWTTF-B';
+  border-bottom: 1px solid rgb(160, 160, 160);
+  /* 크기 조정 */
+  width: 100%;
+  height: 120px;
+  /* header color 추가 */
+  /* background-color: #C8DBBE; */
+  /* header font 추가 */
 }
-header>h1{
-    text-align: center;
-    padding-left: 9%;
+/* 상단 var 추가 css */
+header>#section_var {
+  font-family: 'NanumSquareNeo-Variable';
+  text-align: right;
+  border-top: 1px solid rgb(160, 160, 160);
+  border-bottom: 1px solid rgb(160, 160, 160);
+  padding: 5px;
 }
-header>h1>div{
-    width: 10%;
-    border: 1px solid red;
-    height: 80px;
-    float: right;
-    margin-right: 10px;
+header>#section_var>div {
+  display: inline;
+  margin-right: 10px;
 }
-header>h1>div>div{
-    border: 1px solid red;
-    width: 60%;
-    height: 60%;
-    margin: 10% 20% 0px 20%;
+header>#section_var>div>a {
+  text-decoration-line: none;
+  color: #181414;
+}
+/* ----------------- */
+
+/* 로고 추가로 인한 css 변겅 */
+header>#logo>a>img {
+  display: block;
+  margin: 0px auto;
+  width: 250px;
 }
 nav{
-    width: 100%;
-    height: 50px;
-    /* nav color 추가 */
-    /* background-color: #C8DBBE; */
-    /* font 추가 */
-    font-family: 'NanumSquareNeo-Variable';
+  width: 100%;
+  height: 50px;
+  /* nav color 추가 */
+  /* background-color: #C8DBBE; */
+  /* font 추가 */
+  font-family: 'NanumSquareNeo-Variable';
 }
 nav>ul{
-    text-align: center;
-    padding-left: 0px;
-    width: 100%;
-    margin: 16px 0px 16px 0px;
-    float: left;
+  text-align: center;
+  padding-left: 0px;
+  width: 100%;
+  margin: 16px 0px 16px 0px;
+  float: left;
 }
 nav>ul>li{
-    display: inline;
-    padding: 0px 20px 0px 20px;
-    letter-spacing: 3px;
+  display: inline;
+  padding: 0px 20px 0px 20px;
+  letter-spacing: 3px;
+
+}
+nav>ul>li>a {
+  text-decoration-line: none;
+  color: #181414;
 }
 main{
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    height: 4200px;
-    display: center;
-    /* main color 추가 */
-    /* font 추가 */
-    font-family: 'NanumSquareNeo-Variable';
+  width: 100%;
+  height: 1800px;
+  display: center;
+  /* main color 추가 */
+  /* font 추가 */
+  font-family: 'NanumSquareNeo-Variable';
 }
 main>aside{
-    border: 1px solid rgb(0, 0, 0);
-    width: 90%;
-    height: 4190px;
-    margin: -5% 5% 0px 5%;
-    /* aside color 추가 */
-    background-color: #ffffff;
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 90%;
+  height: 850px;
+  margin: 0% 5% 0px 5%;
+  /* aside color 추가 */
+  /* background-color: #efefef; */
 }
 footer{
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    height: 50px;
-    /* footer color 추가 */
-    background-color: #181414;
-    /* footer text color 추가 */
-    color: #F9F3F3;
-    position: relative;
-    transform: translateY(-100%);
-    margin-bottom: 0;
+  width: 100%;
+  height: 50px;
+  /* footer color 추가 */
+  background-color: #181414;
+  /* footer text color 추가 */
+  color: #F9F3F3;
 }
 #div_half{
-    width: 50%;
-    height: 100%;
-    float: left;
+  width: 50%;
+  height: 100%;
+  float: left;
 }
 #div_news{
-    border: 1px solid rgb(0, 0, 0);
-    width: 90%;
-    height: 90%;
-    margin: 6% 5% 5% 5%;
+  border: 1px solid rgb(0, 0, 0);
+  width: 90%;
+  height: 90%;
+  margin: 6% 5% 5% 5%;
 }
 .div_quadrant{
-    width: 30%;
-    height: 10%;
-    margin: 5% 35% 5% 35%;
-    display: inline-block;
-    text-align: center;
-    transition-duration: 0.9s;
+  margin: 8% 10% 0% 10%;
+  width: 80%;
+  height: 10%;
+  display: inline-block;
+  text-align: center;
+  transition-duration: 0.9s;
+  border-radius: 20px;
 }
 .p_bigfont{
-    font-size: 50px;
+  margin-top: 3%;
+  font-size: 30px;
 }
 #div_third_division{
-    border: 1px solid rgb(0, 0, 0);
-    width: 80%;
-    height: 25.59%;
-    margin: 6% 10% 0% 10%;
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 80%;
+  height: 25.59%;
+  margin: 6% 10% 0% 10%;
+  border-radius: 10px;
 }
 #div_reservation{
-    border: 1px solid rgb(0, 0, 0);
-    margin: 5% 30% 5% 30%;
-    float: left;
-    width: 40%;
-    height: 20%;
-    padding-top: 5%;
-    transition-duration: 0.4s;
-    border-radius: 100px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 5% 30% 5% 30%;
+  float: left;
+  width: 40%;
+  height: 20%;
+  padding-top: 5%;
+  transition-duration: 0.4s;
+  border-radius: 100px;
 }
 #div_reservation:hover{
-    background-color: rgb(63, 148, 46);
+  background-color: rgb(63, 148, 46);
 }
 .div_greetings{
-    border: 1px solid rgb(0, 0, 0);
-    width: 80%;
-    height: 60%;
-    margin: 7% 10% 5% 10%;
-    border-radius: 10px;
-    float: left;
-    text-align: center;
+  width: 80%;
+  height: 60%;
+  margin: 7% 10% 5% 10%;
+  border-radius: 10px;
+  float: left;
+  text-align: center;
 }
 #p_comper_velue{
-    margin-top: -3%;
+  margin-top: -3.3%;
 }
 .p_check_v{
-    display: none;
-    margin-top: 6%;
-    font-size: 50px;
+  display: none;
+  margin-top: 6%;
+  font-size: 50px;
 }
 .div_Lslide{
-    width: 100%;
-    height: 100%;
-    background-image: url(../image/hello_demo.jpg);
-    background-size: 100% 100%;
-    border-radius: 10px;
-    transition-duration: 1s;
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/hello_demo.jpg);
+  background-size: 100% 100%;
+  border-radius: 10px;
+  transition-duration: 1s;
 }
 #div_half_division1{
-    border: 1px solid rgb(0, 0, 0);
-    width: 46%;
-    height: 90%;
-    margin: 2% 1% 2% 2%;
-    float: left;
-    background-size: 100% 100%;
-    text-align: center;
-    border-radius: 10px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 46%;
+  height: 90%;
+  margin: 2% 1% 2% 2%;
+  float: left;
+  background-size: 100% 100%;
+  text-align: center;
+  border-radius: 10px;
 }
 #div_half_division2{
-    border: 1px solid rgb(0, 0, 0);
-    width: 46%;
-    height: 90%;
-    margin: 2% 1% 2% 2%;
-    float: left;
-    text-align: center;
-    background-image: url(../image/BI_happy_dog.jpg);
-    background-size: 100% 100%;
-    border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 46%;
+  height: 90%;
+  margin: 2% 1% 2% 2%;
+  float: left;
+  text-align: center;
+  background-image: url(../image/BI_happy_dog.jpg);
+  background-size: 100% 100%;
+  border-radius: 10px;
 }
 .a_gallery_colar{
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 .a_gallery_colar:hover{
-    text-decoration: underline;
+  text-decoration: underline;
 }
 #p_gallery{
-    font-size: 30px;
-    margin-top: -5%;
+  font-size: 30px;
+  margin-top: -5%;
 }
 #div_review{
-    border: 1px solid rgb(0, 0, 0);
-    width: 90%;
-    height: 90%;
-    margin: 2% 5% 2% 5%;
-    float: left;
+  border: 1px solid rgb(0, 0, 0);
+  width: 90%;
+  height: 90%;
+  margin: 2% 5% 2% 5%;
+  float: left;
 }
 #p_review{
-    font-size: 20px;
-    margin-top: 20px;
+  font-size: 20px;
+  padding: 5%;
 }
 
 
 /* 자바 스크립트에 사용하는 클래스*/
 
 .p_change{
-    font-size: 30px;
-    margin-top: 3%;
+  width: 30%;
+  height: 10%;
+  margin: 3% 35% 0% 35%;
+  border-radius: 10px;
 }
 .div_change{
-    margin: 5% 10% 5% 10%;
-    width: 80%;
-    height: 10%;
-    background-color: rgb(63, 148, 46);
-    border-radius: 10px;
+  font-size: 30px;
+  background-color: rgb(63, 148, 46);
 }
 .div_hidden_area{
-    opacity: 0%;
+  opacity: 0%;
 }
 .div_Lslide_move{
-    width: 0%;
-    opacity: 0%;
-}
-
-
-#fix_footer{
-    height: auto;
-  min-height: 100%;
-  padding-bottom: 50px;
+  width: 0%;
+  opacity: 0%;
 }
 
 /*-----------------[병준 시작]-------------
