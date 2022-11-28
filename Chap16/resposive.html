@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--반응형으로 제작할 수 있는 기본 도구-->
+    <title>Response Web Design</title>
+
+    <style>
+        #main{
+            border: 1px solid red;
+            width: 600px;
+            float: left;
+        }
+
+        footer{
+            clear: both;
+        }
+
+        header{
+            border: 1px solid red;
+        }
+
+        nav{
+            width:300px;
+            float:right;
+        }
+
+        @media screen and (max-width: 980px){
+            #page{width: 94%;
+        }
+            #main{width: 65%;}
+            nav{width: 30%;}
+    }
+
+        @media screen and (max-width: 700px){
+            #main {
+                width: auto;
+                float:none;    
+            }
+            nav{width: auto;
+                float: none;}
+        }
+            
+        @media screen and (max-width:  480px){
+            header{height:auto;}
+            h2{font-size: 24px;}
+            nav{display: none;}
+        }
+            
+        
+    </style>
+</head>
+<body id="page">
+    
+    <header><h2>header</h2></header>
+    <div id="main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt est quas nisi at debitis accusantium, ipsa in voluptatum ratione dicta quibusdam, optio saepe temporibus. Unde eaque ipsa modi nostrum fugiat.
+        Qui, unde aspernatur maiores necessitatibus id a dolorum libero aliquam sit facere ipsum accusantium iste iure possimus totam eum ad nam tempora! Explicabo nulla reprehenderit quis molestiae quae numquam quas!
+        Debitis cupiditate distinctio nam? Sit officiis praesentium odio reiciendis deserunt neque ea quod, architecto soluta, unde rerum aut quas nesciunt autem dolorum veritatis quidem quisquam est eos? Voluptatum, culpa! Saepe.</div>
+    <div id="sidebar">
+        <nav>
+        <ul>
+            <h2> sidebar </h2>
+            <li>Fluid Grids</li>
+            <li>media Queries</li>
+        </ul>
+        </nav>
+        </div>
+    <div id="footer"><h2>Footer</h2></div>
+</body>
+</html>
+
