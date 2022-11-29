@@ -3,7 +3,8 @@ function scrollMove() {
     $(function () {
         $(window).scroll(function () {
             if ($(document).scrollTop() > 100) {
-                $("#fix_header_nav").css('background-color', '#C8DBBE ');
+                $("#fix_header_nav").css('background-color', 'white');
+                // $("#fix_header_nav:hover").css('opacity','0')
             } else {
                 $("#fix_header_nav").css('background-color', 'transparent ');
             };
@@ -11,13 +12,31 @@ function scrollMove() {
     });
 };
 
+// swiper
+$(function() {
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
+});
+
 //갤러리 둘러보기 바꾸기
 function GBI() {
     setTimeout(change_img1, 2000);
 };
 
-
-//[메인 페이지에 들어갈 갤러리 구역에 병준 링크 추가하기]
 function change_img1() {
     $("#div_half_division2").css({ "background": "url(../image/BI_sea_dog.jpg)" });
     $("#div_half_division2").css({ "background-size": "100% 100%" });
@@ -38,9 +57,6 @@ function change_img3() {
     //$('.linkButton').prop('href', 변경할 값)
     setTimeout(change_img1, 2000);
 };
-
-
-
 
 // 숫자들 변경
 
@@ -86,6 +102,7 @@ function scrfix() {
         }
     })
 }
+// main 리뷰 내용 타이핑 효과
 function typing_main() {
     var arr0 ="사진을 정말 예쁘게 찍어줘요!"
     var arr1 ="서비스가 너무 친절해요~";
@@ -95,25 +112,21 @@ function typing_main() {
     var arr5 ="컨셉 사진도 잘 찍어줘요!";
     var arr6 ="강아지 간식도 구비되어 있어요!";
     var arr7 ="여기 직원분들이 전부 전문가 같아요!";
+    var arrto = [arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr0]
     const text = document.getElementById("p_review");
     let i = 0;
-
-    function typing(n) {
-        let txt = arr0[i++];
-        text.innerHTML += txt;
-        if (i > arr0.length) {
-            text.textContent = "";
+    let j = 0;
+    function typing() {
+        let txt = arrto[i][j++];
+        $("#p_review").append(txt);
+        if (j > arrto[i].length) {
+            $("#p_review").text("");
+            j=0;
             i++;
+            if (i>7) {
+                i=0;
+            }
         }
     }
-    setInterval(typing, 300);
+    setInterval(typing, 200);
 }
-/*------------------------------------------*/
-/*이미지 모달*/
-function myFunction(imgs) {
-    var tapexpandImg = document.getElementById("tapexpandedImg");
-    var tapimgText = document.getElementById("tapimgtext");
-    tapexpandImg.src = imgs.src;
-    tapimgText.innerHTML = imgs.alt;
-    tapexpandImg.parentElement.style.display = "block";
-  }

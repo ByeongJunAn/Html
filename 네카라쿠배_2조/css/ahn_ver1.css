@@ -1,0 +1,248 @@
+/*-----------------[병준 시작]-------------
+[긴 박스에 텍스트와 이미지를 넣어 꾸미기]----------------------------------------*/
+
+
+/*박스 사이즈 초기화*/
+* {
+    box-sizing:border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*박스 내부 크기 결정*/
+  .container {
+    padding: 64px;
+  }
+  
+  /*float로 밑에서 올라오는 거 방지*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+  
+
+  .column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+  }
+  
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
+  .large-font {
+    font-size: 48px;
+  }
+  
+  .xlarge-font {
+    font-size: 64px
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #04AA6D;
+  }
+  
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }
+
+  #main_ahn{
+    height: 1850px;
+  }
+
+  
+/*------------------"베스트 사진"에 있는 검은 개 사진의 기능과 속성 변경------------------------*/
+
+.column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* columns의 float 속성때문에 따라 올라가는걸 방지하려고 쓰는 코드 */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* 화면 너비가 800픽셀 미만인 경우 3개의 열이 옆이 아닌 위로 쌓이기 바꿈 */
+@media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+ h1{
+    padding: 10px;
+    margin: 5px;
+ } 
+  h2{
+    text-align: center;
+    padding: 50px;
+}
+
+#div_big{
+  width: 1000px;
+  height: 390px;
+  margin: 3% 20% 10% 20%;
+  background-color: black;
+  /* z-index: -1; */
+  position: relative;
+
+  /* border: 1px solid red; */
+ 
+}
+
+#boximg1{
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#boximg2{
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#div_sal1{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  width: 50%;
+  height: 100%;
+  /* float: left; */
+  background-color: red;
+  opacity: 1.0;
+  /* z-index: 1; */
+  
+  
+}
+#div_sal2{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  opacity: 1;
+  float: left;
+  /* z-index: 2; */
+}
+#qwe{
+  font-size: 30px;
+  /* margin: 30% 20% 30% 45%; */
+  opacity: 0;
+ 
+}
+#div_sal1:hover{
+  opacity:0;
+  
+}
+#div_sal2:hover{
+  opacity: 0;
+}
+#div_sal1:hover > #qwe {
+  opacity: 1;
+}
+#div_sal1:hover > #div_sal2 {
+  opacity: 1;
+  position: absolute;
+}
+#div_sal2:hover > #qwe{
+  opacity: 1;
+  
+}
+
+#div_sal1:hover> #boximg1 {
+  z-index: 10;
+}
+
+#div_sal2:hover> #boximg2 {
+  z-index: 10;
+}
+
+/*--------------------------------------*/
+
+/* 검은 강아지 사진에 패딩 안주면 서로 붙어 있어서 줌 */
+.tappedcolumn {
+    padding: 10px;
+  }
+  
+  /* 사이트에 보이는 검은 강아지 사진의 속성 변경 */
+  .tapcolumn img {
+    opacity: 0.8; 
+    cursor: pointer; 
+    float: left;
+    width: 25%;
+    padding: 5px;
+    height: 300px;
+  }
+  
+  /*마우스 올리면 진하게*/
+  .tapcolumn img:hover {
+    opacity: 1;
+  }
+  
+  /* float의 특징으로 인해 빈 공간에 올라가는걸 막기 위해 사용하는 코드 */
+  .taprow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /*눌렀을 때 나온는 큰 이미지 속성 변경 */
+  .tapcontainer {
+    position: relative;
+    display: none;
+  }
+  
+  /* 이미지 왼쪽 아래에 써있는 텍스트 속성 변경 */
+  #tapimgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* x버튼(끄기) 이미지 속성추가 및 변경 */
+  .tapclosebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+ 
