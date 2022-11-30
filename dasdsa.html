@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap {
+  position:relative;
+  background:slategray;
+}
+
+.wrap > div {
+  width:100px;
+  height:100px;
+  margin:0.5rem;
+  color:#fff;
+  position:absolute;
+}
+
+#실내내용 {
+  top:30px;
+  left:0px;
+  background-color:red;
+  z-index:-1;
+  width: 100px;
+  height: 50px;
+  opacity: 1;
+}
+
+
+#실외내용 {
+  top:80px;
+  left: 0px;
+  background-color:rgb(240, 20, 20);
+  z-index:-2;
+  width: 100px;
+  height: 50px;
+  opacity: 1;
+}
+
+
+
+#실내{
+  top:30px;
+  left:0;
+  background-color:rgb(23, 0, 128);
+  z-index:1;
+  width: 100px;
+  height: 50px;
+  opacity: 1;
+
+
+}
+#실내:hover{
+    opacity: 0; 
+    /* z-index: -23; */
+}
+
+#실외 {
+  top:80px;
+  left:0px;
+  background-color:rgb(0, 60, 255);
+  z-index:2;
+  width: 100px;
+  height: 50px;
+  opacity: 1;
+}
+
+#실외:hover{
+    opacity: 0;
+}
+    </style>
+</head>
+
+    
+    <body>
+        <div class="wrap">
+         <div id="실내내용"></div>
+            <div id="실외내용"  ><div>first
+            <!-- <img src="./네카라쿠배_2조/image/내부/studio17.jpg" style="width: 100px; height: 100px;"> -->
+        </div>first</div>
+          <div id="실내">second</div>
+          <div id="실외">third</div>
+        </div>
+      </body>
+
+</html>

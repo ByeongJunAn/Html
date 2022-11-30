@@ -1,5 +1,3 @@
-
-
 // Open the Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";

@@ -207,7 +207,7 @@ img:hover {opacity: 1.0;}
 
 
 /* Caption text box*/
-.caption-container {
+/* .caption-container {
   
   text-align: center;
   background-color: rgb(0, 0, 0);
@@ -218,7 +218,7 @@ img:hover {opacity: 1.0;}
  
  
 
-}
+} */
 
 .caption_text_center{
   width: 100%;
@@ -273,3 +273,7 @@ img.hover-shadow {
     align-items: center;
    
 }
+
+
+
+

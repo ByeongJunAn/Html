@@ -16,8 +16,12 @@
   }
   
   /*박스 내부 크기 결정*/
-  .container {
-    padding: 64px;
+  .container2 {
+    padding: 0;
+  }
+
+  .container4 {
+    padding: 0px;
   }
   
   /*float로 밑에서 올라오는 거 방지*/
@@ -31,7 +35,8 @@
   .column-66 {
     float: left;
     width: 66.66666%;
-    padding: 20px;
+    /* padding: 20px; */
+    height: 15px;
   }
   
   .column-33 {
@@ -42,21 +47,70 @@
   
   .large-font {
     font-size: 48px;
+    top: auto;
   }
   
   .xlarge-font {
     font-size: 64px
   }
+
+
+ .p{
   
-  .button {
-    border: none;
-    color: white;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #04AA6D;
-  }
-  
+ }
+
+/*버튼*/
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: right;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /*------------------------------------------*/
   img {
     display: block;
     height: auto;
@@ -86,6 +140,13 @@
     width: 25%;
   }
   
+  .row{
+   
+    padding:50px;
+    margin: 35px;
+  }
+
+
   /* columns의 float 속성때문에 따라 올라가는걸 방지하려고 쓰는 코드 */
   .row:after {
     content: "";
@@ -227,6 +288,7 @@
   .tapcontainer {
     position: relative;
     display: none;
+    
   }
   
   /* 이미지 왼쪽 아래에 써있는 텍스트 속성 변경 */
