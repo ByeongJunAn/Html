@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css 링크연결 -->
+    <link rel="stylesheet" href="../css/main_ver8.css">
+    <script src="../js/main_ver8.js"></script>
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="../css/yu_ver2_intro.css";>
+    
+    <script src="../js/yu_ver2_intro.js"></script>
+        <!-- nav 아이콘 - 개인 페이지에도 복사하기 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body id="body_ratio" onscroll="scrollMove()" onload="scrfix();">
+            <!-- top -->
+            <p id="motop"></p>
+            <a href="#motop">
+                <div id="top">top</div>
+            </a>
+    <!-- hearder_nav -->
+    <div id="fix_header_nav">
+        <nav>
+            <ul>
+                <!-- i태그 아이콘 추가 -->
+                <li><a href="../html/yu_ver2_intro.html"><i class="fa-solid fa-paw"></i>소개</a></li>
+                <li><a href="../html/leo_ver3_service.html"><i class="fa-solid fa-dog"></i>서비스</a></li>
+                <li><a href="../html/ahn_ver1.html"><i class="fa-solid fa-paw"></i>갤러리</a></li>
+                <li><a href="../html/mechuri_ver4.html"><i class="fa-solid fa-dog"></i>문의하기</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--  -->
+
+    <!-- main구간 -->
+    
+    <main id="main_yu">
+        <div id="fix_main_intro">
+            <header class="header_change">
+                <!-- 상단 login/mypage/cart section 만들어봄 -->
+                <div id="section_var">
+                    <div id="cart"><a href="../html/main_ver8.html">Home</a></div>
+                    <div id="login"><a href="../html/oneday_login.html">Login</a> </div>
+                    <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
+                </div>
+                <!-- 페이지 로고 추가 -->
+                <div id="logo">
+                    <a href="../html/main_ver8.html"><img src="../image/logo.png"></a>
+                </div>
+            </header>
+            <!-- <video class="background" autoplay muted loop width="100%">
+                <source src="../video/background1.mp4">
+                배경을 찾을 수 없습니다.
+            </video> -->
+        </div>
+        <aside id="aside_yu">
+            <div id="divsec1" onmouseup="textmove('movet')">
+                <div id="temp0"><h1 id="temp2">반려견과의 추억을 만드세요</h1></div>
+                <div id="temp5"><p id="movet">우리 기업은 반려견과의 소중한 추억을 남겨 드립니다.</p></div>
+            </div>
+            <div id="divsec2">
+                <div id="temp1"><h1 id="temp4">반려견과 함께하는 기업입니다.</h1></div>
+                <div id="temp3"><p id="movet">반려동물은 가족입니다. 가족과 함께하듯 반려견과 함께 하겠습니다.</p></div>
+            </div>
+            <div id="divsec3">
+                <div id="temp0"><h1 id="temp2">반려견의 인생을 담아드립니다.</h1></div>
+                <div id="temp5"><p id="movet">강아지의 처음과 끝까지 함께합니다.</p></div>
+            </div>
+        </aside>
+    </main>
+    <!-- footer -->
+    <footer>
+        <p>서울시 동작구 신대방동 364-90번지 | TEL:02-000-0000</p>
+        <p>사업자등록번호 : 100-00-00000 | 대표 : NTLCB</p>
+        <p>㈜ NTLCB COMPANY ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

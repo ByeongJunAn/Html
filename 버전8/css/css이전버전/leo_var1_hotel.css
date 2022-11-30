@@ -1,0 +1,71 @@
+/* A룸 css */
+#Aroom{
+/* background-color: aqua; */
+    font-size: 150%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    opacity: 1;
+}
+
+/* B룸 css */
+#Broom{
+    /* background-color: aquamarine; */
+    font-size: 150%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* C룸 css */
+#Croom{
+/* background-color: azure; */
+font-size: 150%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* D룸 css */
+#Droom{
+/* background-color: beige; */
+font-size: 150%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* 이미지 사이즈조정 */
+#img_room{
+    border-radius: 30%;
+    width: 200px;
+    height: 150px;
+}
+
+/* h1호텔 텍스트 */
+#h1_hotel{
+    text-align: center;
+    font-size: 300%;
+}
+
+/* room전체 div 중간정렬 */
+#div_room{
+    /* border:  1px solid red; */
+    /* text-align: center; */
+    /* background-color: rgb(157, 99, 22); */
+    /* width:25%;
+    height:100%; */
+    /* position:absolute; */
+    /* left:25%; */
+    /* top:50%; */
+    /* margin-left:-200px;
+    margin-top:-400px; */
+    display: flex;
+    height: 50vh;
+    justify-content:center;
+    align-items : center;
+    
+}

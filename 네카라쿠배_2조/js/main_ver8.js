@@ -35,6 +35,11 @@ $(function() {
 //갤러리 둘러보기 바꾸기
 function GBI() {
     setTimeout(change_img1, 2000);
+    if (localStorage.flag == "1"){
+        document.getElementById("login").innerHTML = "Logout"
+    }else{
+        document.getElementById("login").innerHTML = "Login"
+    }
 };
 
 function change_img1() {
@@ -81,15 +86,6 @@ function p_text_change_in(n, msg1, msg2) {
     });
 };
 
-// 기업가치 가기
-function div_left_move() {
-    $(".div_Lslide").addClass("div_Lslide_move");
-    $("#p_comper_velue").css('display', 'none');
-    setTimeout(visible_p, 900);
-}
-function visible_p() {
-    $(".p_check_v").css('display', 'block');
-}
 // 네비 상단바 고정
 function scrfix() {
     $(window).scroll(() => {
@@ -129,4 +125,13 @@ function typing_main() {
         }
     }
     setInterval(typing, 200);
+}
+
+function pageChangeLoginOut(){
+    if (document.getElementById("login").innerHTML == "Logout"){
+        document.getElementById("login").innerHTML = "Login";
+    }else {
+        var link = '..\\HTML\\oneday_login.html';
+        location.href = link;
+    }
 }

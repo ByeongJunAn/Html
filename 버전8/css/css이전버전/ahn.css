@@ -1,0 +1,497 @@
+/* ver6 - 상단 login 섹션 추가 , header 로고 추가 -> h1삭제, fix-main에 이미지 추가*/
+
+/* header 텍스트 - KOFIH이종욱체 */
+@font-face {
+  font-family: 'KOFIHDrLEEJWTTF-B';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+/* 그 외 텍스트 - 나눔스퀘어 네오 */
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 전체 픽셀 고정*/
+#body_ratio{
+  max-width: 1920px;
+  max-height: 1080px;
+  min-width: 1366px;
+  min-height: 768px;
+  height: 100%;
+  width: 100%;
+  /* background-image: url(../image/고개돌린\ 개.jpg); */
+}
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1150px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;    /*투명도*/
+  object-fit: cover;
+  justify-content: center;
+  /* padding-left: 30%; */
+  /* margin-left: 300px; */
+  /* margin-right: -300px; */
+  /* border: 1px solid red; */
+  /* background-size: 200px; */
+
+  
+  /* &__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; 
+      
+  } */
+}
+
+/* fix 고정시키는 id */
+#fix_header_nav{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  font-family: 'KOFIHDrLEEJWTTF-B';
+  border: 1px solid rgb(160, 160, 160);
+  margin-top: 115px;
+}
+
+/* hearder + nav 와 main 을 분리하기위한 id */
+#fix_main{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-size: 100% 100%;
+  background-image: url(../image/mechuri_강아지1.jpg);
+}
+
+/* header 적용 */
+.header_change{
+  border-bottom: 1px solid rgb(160, 160, 160);
+  /* 크기 조정 */
+  width: 100%;
+  height: 120px;
+  /* header color 추가 */
+  /* background-color: #C8DBBE; */
+  /* header font 추가 */
+}
+/* 상단 var 추가 css */
+header>#section_var {
+  font-family: 'NanumSquareNeo-Variable';
+  text-align: right;
+  border-top: 1px solid rgb(160, 160, 160);
+  border-bottom: 1px solid rgb(160, 160, 160);
+  padding: 5px;
+}
+header>#section_var>div {
+  display: inline;
+  margin-right: 10px;
+}
+header>#section_var>div>a {
+  text-decoration-line: none;
+  color: #181414;
+}
+/* ----------------- */
+
+/* 로고 추가로 인한 css 변겅 */
+header>#logo>a>img {
+  display: block;
+  margin: 0px auto;
+  width: 250px;
+}
+nav{
+  width: 100%;
+  height: 50px;
+  /* nav color 추가 */
+  /* background-color: #C8DBBE; */
+  /* font 추가 */
+  font-family: 'NanumSquareNeo-Variable';
+}
+nav>ul{
+  text-align: center;
+  padding-left: 0px;
+  width: 100%;
+  margin: 16px 0px 16px 0px;
+  float: left;
+}
+nav>ul>li{
+  display: inline;
+  padding: 0px 20px 0px 20px;
+  letter-spacing: 3px;
+
+}
+nav>ul>li>a {
+  text-decoration-line: none;
+  color: #181414;
+}
+main{
+  width: 100%;
+  height: 1800px;
+  display: center;
+  /* main color 추가 */
+  /* font 추가 */
+  font-family: 'NanumSquareNeo-Variable';
+}
+main>aside{
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 90%;
+  height: 850px;
+  margin: 0% 5% 0px 5%;
+  /* aside color 추가 */
+  /* background-color: #efefef; */
+}
+footer{
+  width: 100%;
+  height: 50px;
+  /* footer color 추가 */
+  background-color: #181414;
+  /* footer text color 추가 */
+  color: #F9F3F3;
+}
+#div_half{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+#div_news{
+  border: 1px solid rgb(0, 0, 0);
+  width: 90%;
+  height: 90%;
+  margin: 6% 5% 5% 5%;
+}
+.div_quadrant{
+  margin: 8% 10% 0% 10%;
+  width: 80%;
+  height: 10%;
+  display: inline-block;
+  text-align: center;
+  transition-duration: 0.9s;
+  border-radius: 20px;
+}
+.p_bigfont{
+  margin-top: 3%;
+  font-size: 30px;
+}
+#div_third_division{
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 80%;
+  height: 25.59%;
+  margin: 6% 10% 0% 10%;
+  border-radius: 10px;
+}
+#div_reservation{
+  border: 1px solid rgb(0, 0, 0);
+  margin: 5% 30% 5% 30%;
+  float: left;
+  width: 40%;
+  height: 20%;
+  padding-top: 5%;
+  transition-duration: 0.4s;
+  border-radius: 100px;
+}
+#div_reservation:hover{
+  background-color: rgb(63, 148, 46);
+}
+.div_greetings{
+  width: 80%;
+  height: 60%;
+  margin: 7% 10% 5% 10%;
+  border-radius: 10px;
+  float: left;
+  text-align: center;
+}
+#p_comper_velue{
+  margin-top: -3.3%;
+}
+.p_check_v{
+  display: none;
+  margin-top: 6%;
+  font-size: 50px;
+}
+.div_Lslide{
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/hello_demo.jpg);
+  background-size: 100% 100%;
+  border-radius: 10px;
+  transition-duration: 1s;
+}
+#div_half_division1{
+  /* border: 1px solid rgb(0, 0, 0); */
+  width: 46%;
+  height: 90%;
+  margin: 2% 1% 2% 2%;
+  float: left;
+  background-size: 100% 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+#div_half_division2{
+  border: 1px solid rgb(0, 0, 0);
+  width: 46%;
+  height: 90%;
+  margin: 2% 1% 2% 2%;
+  float: left;
+  text-align: center;
+  background-image: url(../image/BI_happy_dog.jpg);
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+.a_gallery_colar{
+  color: black;
+  text-decoration: none;
+}
+.a_gallery_colar:hover{
+  text-decoration: underline;
+}
+#p_gallery{
+  font-size: 30px;
+  margin-top: -5%;
+}
+#div_review{
+  border: 1px solid rgb(0, 0, 0);
+  width: 90%;
+  height: 90%;
+  margin: 2% 5% 2% 5%;
+  float: left;
+}
+#p_review{
+  font-size: 20px;
+  padding: 5%;
+}
+
+
+/* 자바 스크립트에 사용하는 클래스*/
+
+.p_change{
+  width: 30%;
+  height: 10%;
+  margin: 3% 35% 0% 35%;
+  border-radius: 10px;
+}
+.div_change{
+  font-size: 30px;
+  background-color: rgb(63, 148, 46);
+}
+.div_hidden_area{
+  opacity: 0%;
+}
+.div_Lslide_move{
+  width: 0%;
+  opacity: 0%;
+}
+
+/*-----------------[병준 시작]-------------
+[긴 박스에 텍스트와 이미지를 넣어 꾸미기]----------------------------------------*/
+
+
+/*박스 사이즈 초기화*/
+* {
+    box-sizing:border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*박스 내부 크기 결정*/
+  .container {
+    padding: 64px;
+  }
+  
+  /*float로 밑에서 올라오는 거 방지*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+  
+
+  .column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+  }
+  
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
+  .large-font {
+    font-size: 48px;
+  }
+  
+  .xlarge-font {
+    font-size: 64px
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #04AA6D;
+  }
+  
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }
+
+  
+/*------------------"베스트 사진"에 있는 검은 개 사진의 기능과 속성 변경------------------------*/
+
+.column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* columns의 float 속성때문에 따라 올라가는걸 방지하려고 쓰는 코드 */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* 화면 너비가 800픽셀 미만인 경우 3개의 열이 옆이 아닌 위로 쌓이기 바꿈 */
+@media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+ h1{
+    padding: 10px;
+    margin: 5px;
+ } 
+  h2{
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+/*--------------------------------------*/
+
+/* 검은 강아지 사진에 패딩 안주면 서로 붙어 있어서 줌 */
+.tappedcolumn {
+    padding: 10px;
+  }
+  
+  /* 사이트에 보이는 검은 강아지 사진의 속성 변경 */
+  .tapcolumn img {
+    opacity: 0.8; 
+    cursor: pointer; 
+    float: left;
+    width: 25%;
+    padding: 5px;
+    height: 300px;
+  }
+  
+  /*마우스 올리면 진하게*/
+  .tapcolumn img:hover {
+    opacity: 1;
+  }
+  
+  /* float의 특징으로 인해 빈 공간에 올라가는걸 막기 위해 사용하는 코드 */
+  .taprow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /*눌렀을 때 나온는 큰 이미지 속성 변경 */
+  .tapcontainer {
+    position: relative;
+    display: none;
+  }
+  
+  /* 이미지 왼쪽 아래에 써있는 텍스트 속성 변경 */
+  #tapimgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* x버튼(끄기) 이미지 속성추가 및 변경 */
+  .tapclosebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+ 
+
+  /*-----------------------swiper-----------------------------*/
+
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+  }
+
+  .swiper-slide .subtitle {
+    font-size: 21px;
+  }
+
+  .swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+  }

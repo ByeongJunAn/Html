@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- css 링크연결 -->
+        <link rel="stylesheet" href="../css/main_ver8.css">
+        <link rel="stylesheet" href="../css/mechuri_ver3.css">
+        <!-- 제이쿼리 연결  -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="../js/main_ver8.js"></script>
+        <script src="../js/mechuri_ver1.js"></script>
+    <!-- nav 아이콘 - 개인 페이지에도 복사하기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+        <!-- 텍스트 상자 툴바 -->
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.3.0/classic/ckeditor.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js"  crossorigin="anonymous"></script>
+    
+            <!-- ver7 swiper 링크 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    
+</head>
+    
+<body id="body_ratio" onscroll="scrollMove()" onload="GBI(); scrfix(); typing_main();">
+            <!-- top -->
+            <p id="motop"></p>
+            <a href="#motop">
+                <div id="top">top</div>
+            </a>
+        <!-- hearder_nav -->
+        <div id="fix_header_nav">
+            <nav>
+                <ul>
+                <!-- i태그 아이콘 추가 -->
+                <li><a href="../html/yu_ver2_intro.html"><i class="fa-solid fa-paw"></i>소개</a></li>
+                <li><a href="../html/leo_ver3_service.html"><i class="fa-solid fa-dog"></i>서비스</a></li>
+                <li><a href="../html/ahn_ver1.html"><i class="fa-solid fa-paw"></i>갤러리</a></li>
+                <li><a href="../html/mechuri_ver4.html"><i class="fa-solid fa-dog"></i>문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--  -->
+    
+    <!-- main구간 -->
+    <main>
+        <div id="fix_main" style="opacity: 90%;">
+            <header class="header_change">
+                <!-- 상단 login/mypage/cart section 만들어봄 -->
+                <div id="section_var">
+                    <div id="cart"><a href="../html/main_ver8.html">Home</a></div>
+                    <div id="login"><a href="../html/oneday_login.html">Login</a> </div>
+                    <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
+                </div>
+                <!-- 페이지 로고 추가 -->
+                <div id="logo">
+                    <a href="../html/main_ver8.html"><img src="../image/logo.png"></a>
+                </div>
+            </header>
+
+            <!-- ver7 각페이지 Swiper 추가 -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../image/swiper_dog1.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog2.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog3.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog4.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+        <aside>
+            <div id="mecuri">
+                <div id="inquiry">
+                    <h2>문의하기</h2>
+
+                    <form id="inquiryForm" method="post">
+                        <!--문의 글 작성 영역 (+글꼴 서식, 파일첨부)-->
+                        <div id="inquiryHigh">
+                            <p id="writer">작성자 <input type="text" id="writerInput" placeholder="작성자를 입력하세요"></p>
+                            <p id="title">제목 <input type="text" id="titleInput" placeholder="제목을 입력하세요"></p>
+                        </div>
+                            <textarea name="text" id="editor"></textarea>
+
+                        <div class="inquiry-footer">
+                            <!--글 등록하기 버튼-->
+                            <button class="btn large blue" type="submit">글 등록하기</button>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <!--문의 게시판 영역-->
+                <div id="bulletinBoard">
+                    <h2>문의 게시판</h2>
+
+                    <table id="inquiryList">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="*">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="5%">
+                        </colgroup>
+                        <thead id="thead">
+                            <tr>
+                                <th>NO</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일</th>
+                                <th>답변</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><i class="fa-regular fa-file"></i><a href="../html/main_1p_ver1.html"> 예시</a></td>
+                                <td>메추리</td>
+                                <td>22.11.23</td>
+                                <td>1</td>
+                            </tr>
+                            
+                        </tbody>
+                        <!--글 작성 시 추가되길 원합니다. : 페이지네이션 기능으로 가능한데 어령ㅁ-->
+                    </table>
+
+                    <!--게시판 페이지네이션-->
+                    <div id="pageNumber">
+                        <ul>
+                            <li><a href="#">&lt;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&gt;</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="search" style="padding-left:30px;text-align: center;margin-top:20px;">
+                        <select style="height:30px; font-size: 13px;">
+                            <option>전체</option>
+                            <option>작성자</option>
+                            <option>제목</option>
+                        </select>
+                        <input type="text" placeholder="검색어 입력"
+                        style="width: 200px;padding:5px 10px"
+                        >
+                        <button class="btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>   
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <!--  -->
+
+    <!-- footer -->
+    <footer>
+        <p>서울시 동작구 신대방동 364-90번지 | TEL:02-000-0000</p>
+        <p>사업자등록번호 : 100-00-00000 | 대표 : NTLCB</p>
+        <p>㈜ NTLCB COMPANY ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+
+</html>

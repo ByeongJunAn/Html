@@ -7,321 +7,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!--------------링크 주기--------------------->
-    <link rel="stylesheet" href="../css/main_ver7.css">
+    <!-- css 링크연결 -->
+    <link rel="stylesheet" href="../css/main_ver8.css">
     <link rel="stylesheet" href="../css/ahn_studio_ver1.css">
-    </link>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="../js/main_ver7.js"></script>
-    <script type="text/javascript" src="../js/ahn_studio_ver1.js"></script>
-
-
-
+    <!-- 제이쿼리 연결  -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/main_ver8.js"></script>
+    <script src="../js/ahn_studio_ver1.js"></script>
+    <!-- nav 아이콘 - 개인 페이지에도 복사하기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- ver7 swiper 링크 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body id="body_ratio" onscroll="scrollMove()" onload="GBI(); scrfix(); typing_main();">
-    <!-- hearder_nav -->
-    <div id="fix_header_nav">
-        <nav>
-            <ul>
-                <li><a href="../html/yu_ver2_intro.html">소개</a></li>
-                <li><a href="../html/leo_ver2_service.html">서비스</a></li>
-                <li><a href="../html/ahn.html">갤러리</a></li>
-                <li><a href="../mechuri_ver3.html">문의하기</a></li>
-            </ul>
-        </nav>
+    <!-- top -->
+    <p id="motop"></p>
+    <a href="#motop">
+        <div id="top">top</div>
+    </a>
+<!-- hearder_nav -->
+<div id="fix_header_nav">
+<nav>
+    <ul>
+        <!-- i태그 아이콘 추가 -->
+        <li><a href="../html/yu_ver2_intro.html"><i class="fa-solid fa-paw"></i>소개</a></li>
+        <li><a href="../html/leo_ver3_service.html"><i class="fa-solid fa-dog"></i>서비스</a></li>
+        <li><a href="../html/ahn_ver2.html"><i class="fa-solid fa-paw"></i>갤러리</a></li>
+        <li><a href="../html/mechuri_ver4.html"><i class="fa-solid fa-dog"></i>문의하기</a></li>
+    </ul>
+</nav>
+</div>
+<!--  -->
+
+
+<!-- main구간 -->
+
+<!-- 배경영상 -->
+<!-- <video class="background" autoplay muted loop width="100%">
+<source src="../video/background1.mp4">
+배경을 찾을 수 없습니다.
+</video> -->
+
+<main id="main_ahn3">
+<div id="fix_main"> <!--ver7 슬라이드바 투명도 없앰-->
+    <header class="header_change">
+        <!-- 상단 login/mypage/cart section 만들어봄 -->
+        <div id="section_var">
+            <div id="cart"><a href="../html/main_ver8.html">Home</a></div>
+            <div id="login" onclick="pageChangeLoginOut()"><a href="#">Login</a></div>
+            <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
+        </div>
+        <!-- 페이지 로고 추가 -->
+        <div id="logo">
+            <a href="../html/main_ver8.html"><img style="width: 250px; height: 90px; margin: 0px 40% 0px 40% ;" src="../image/logo.png"></a>
+        </div>
+    </header>
+    <!-- ver7 각페이지 Swiper 추가 -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../image/swiper_dog1.jpg"></div>
+            <div class="swiper-slide"><img src="../image/swiper_dog2.jpg"></div>
+            <div class="swiper-slide"><img src="../image/swiper_dog3.jpg"></div>
+            <div class="swiper-slide"><img src="../image/swiper_dog4.jpg"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
     <!--  -->
-
-    <!-- main구간 -->
-
-    <main>
-        <div id="fix_main" style="opacity: 90%;">
-            <header class="header_change">
-                <!-- 상단 login/mypage/cart section 만들어봄 -->
-                <div id="section_var">
-                    <div id="cart"><a href="#">Home</a></div>
-                    <div id="login"><a href="../html/oneday_login.html">Login</a> </div>
-                    <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
-                </div>
-                <!-- 페이지 로고 추가 -->
-                <div id="logo">
-                    <a href="../html/main_ver6.html"><img src="../image/logo.png"></a>
-                </div>
-            </header>
-            <!-- <video class="background" autoplay muted loop width="100%">
-                <source src="../video/background1.mp4">
-                배경을 찾을 수 없습니다.
-            </video> -->
-        </div>
-    </main>
-
-
-
-
-
-    <main>
-        <aside>
+</div>
+        <aside id="aside_ahn">
 
             <!------------------------------------병준 시작----------------------------------->
+            <p style="font-size: 30px; margin: 0px 28% 20px 30%;">귀여운 강아지들의 스튜디오 사진을 만나보세요!</p>
             <div class="row">
                 <div class="column">
-                    <img src="../image/내부/studio1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"
+                    <img id="img_ahn" src="../image/내부/studio1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio9.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio9.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio10.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio10.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio11.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio11.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio12.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio12.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio13.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio13.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio14.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio14.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio15.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio15.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio16.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio16.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio17.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio17.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow"
                         alt="a dog">
 
                 </div>
                 <div class="column">
-                    <img src="../image/내부/studio18.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio18.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio19.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio19.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio20.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio20.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio21.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio21.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio22.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio22.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio23.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio23.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio24.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio24.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio25.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio25.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio26.jpg" onclick="openModal();currentSlide(26)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio26.jpg" onclick="openModal();currentSlide(26)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio27.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio27.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio28.jpg" onclick="openModal();currentSlide(28)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio28.jpg" onclick="openModal();currentSlide(28)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio29.jpg" onclick="openModal();currentSlide(29)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio29.jpg" onclick="openModal();currentSlide(29)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio30.jpg" onclick="openModal();currentSlide(30)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio30.jpg" onclick="openModal();currentSlide(30)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio31.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio31.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
                 <div class="column">
-                    <img src="../image/내부/studio32.jpg" onclick="openModal();currentSlide(32)" class="hover-shadow"
+                    <img  id="img_ahn" src="../image/내부/studio32.jpg" onclick="openModal();currentSlide(32)" class="hover-shadow"
                         alt="a dog">
                 </div>
 
-                <div class="column">
-                    <img src="../image/내부/studio33.jpg" onclick="openModal();currentSlide(33)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio34.jpg" onclick="openModal();currentSlide(34)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio35.jpg" onclick="openModal();currentSlide(35)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio36.jpg" onclick="openModal();currentSlide(36)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio37.jpg" onclick="openModal();currentSlide(37)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio38.jpg" onclick="openModal();currentSlide(38)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio39.jpg" onclick="openModal();currentSlide(39)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio40.jpg" onclick="openModal();currentSlide(40)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio41.jpg" onclick="openModal();currentSlide(41)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio42.jpg" onclick="openModal();currentSlide(42)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio43.jpg" onclick="openModal();currentSlide(43)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio44.jpg" onclick="openModal();currentSlide(44)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio45.jpg" onclick="openModal();currentSlide(45)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio46.jpg" onclick="openModal();currentSlide(46)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio47.jpg" onclick="openModal();currentSlide(47)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio48.jpg" onclick="openModal();currentSlide(48)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio49.jpg" onclick="openModal();currentSlide(49)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio50.jpg" onclick="openModal();currentSlide(50)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-                <div class="column">
-                    <img src="../image/내부/studio51.jpg" onclick="openModal();currentSlide(51)" class="hover-shadow"
-                        alt="a dog">
-                </div>
-
-
-
+                
 
 
 
@@ -627,159 +549,7 @@
                                 </div>
                             </div>
 
-                            <div class="mySlides">
-                                <div class="numbertext">33 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio33.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">34 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio34.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">35 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio35.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">36 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio36.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">37 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio37.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-
-                            <div class="mySlides">
-                                <div class="numbertext">38 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio38.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">39 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio39.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">40 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio40.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">41 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio41.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">42 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio42.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">43 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio43.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">44 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio44.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">45 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio45.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">46 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio46.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">47 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio47.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">48 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio48.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">49 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio49.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">50 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio50.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">51 / 51
-                                </div>
-                                <div id="modal_main_img">
-                                    <img src="../image/내부/studio51.jpg" id="modal_main_img_size">
-                                </div>
-                            </div>
-
+                            
 
 
                             <!-- Next/previous controls -->
@@ -798,201 +568,126 @@
                             <!-- Thumbnail image controls -->
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio1.jpg" onclick="currentSlide(1)" alt="일입니다">
+                                <img class="demo" src="../image/내부/studio1.jpg" onclick="currentSlide(1)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio2.jpg" onclick="currentSlide(2)" alt="이입니다">
+                                <img class="demo" src="../image/내부/studio2.jpg" onclick="currentSlide(2)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio3.jpg" onclick="currentSlide(3)" alt="삼입니다">
+                                <img class="demo" src="../image/내부/studio3.jpg" onclick="currentSlide(3)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio4.jpg" onclick="currentSlide(4)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio4.jpg" onclick="currentSlide(4)">
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio5.jpg" onclick="currentSlide(5)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio5.jpg" onclick="currentSlide(5)" >
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio6.jpg" onclick="currentSlide(6)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio6.jpg" onclick="currentSlide(6)" >
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio7.jpg" onclick="currentSlide(7)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio7.jpg" onclick="currentSlide(7)" >
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio8.jpg" onclick="currentSlide(8)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio8.jpg" onclick="currentSlide(8)">
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio9.jpg" onclick="currentSlide(9)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio9.jpg" onclick="currentSlide(9)" >
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio10.jpg" onclick="currentSlide(10)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio10.jpg" onclick="currentSlide(10)" >
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio11.jpg" onclick="currentSlide(11)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio11.jpg" onclick="currentSlide(11)" >
                             </div>
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio12.jpg" onclick="currentSlide(12)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio12.jpg" onclick="currentSlide(12)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio18.jpg" onclick="currentSlide(13)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio18.jpg" onclick="currentSlide(13)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio19.jpg" onclick="currentSlide(14)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio19.jpg" onclick="currentSlide(14)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio20.jpg" onclick="currentSlide(15)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio20.jpg" onclick="currentSlide(15)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio21.jpg" onclick="currentSlide(16)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio21.jpg" onclick="currentSlide(16)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio17.jpg" onclick="currentSlide(17)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio17.jpg" onclick="currentSlide(17)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio18.jpg" onclick="currentSlide(18)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio18.jpg" onclick="currentSlide(18)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio19.jpg" onclick="currentSlide(19)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio19.jpg" onclick="currentSlide(19)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio20.jpg" onclick="currentSlide(20)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio20.jpg" onclick="currentSlide(20)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio21.jpg" onclick="currentSlide(21)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio21.jpg" onclick="currentSlide(21)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio22.jpg" onclick="currentSlide(22)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio22.jpg" onclick="currentSlide(22)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio23.jpg" onclick="currentSlide(23)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio23.jpg" onclick="currentSlide(23)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio24.jpg" onclick="currentSlide(24)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio24.jpg" onclick="currentSlide(24)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio25.jpg" onclick="currentSlide(25)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio25.jpg" onclick="currentSlide(25)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio26.jpg" onclick="currentSlide(26)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio26.jpg" onclick="currentSlide(26)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio27.jpg" onclick="currentSlide(27)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio27.jpg" onclick="currentSlide(27)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio28.jpg" onclick="currentSlide(28)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio28.jpg" onclick="currentSlide(28)" >
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio29.jpg" onclick="currentSlide(29)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio29.jpg" onclick="currentSlide(29)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio30.jpg" onclick="currentSlide(30)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio30.jpg" onclick="currentSlide(30)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio31.jpg" onclick="currentSlide(31)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio31.jpg" onclick="currentSlide(31)">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="../image/내부/studio32.jpg" onclick="currentSlide(32)" alt="사입니다">
+                                <img class="demo" src="../image/내부/studio32.jpg" onclick="currentSlide(32)">
                             </div>
 
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio33.jpg" onclick="currentSlide(33)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio34.jpg" onclick="currentSlide(34)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio35.jpg" onclick="currentSlide(35)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio36.jpg" onclick="currentSlide(36)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio37.jpg" onclick="currentSlide(37)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio38.jpg" onclick="currentSlide(38)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio39.jpg" onclick="currentSlide(39)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio40.jpg" onclick="currentSlide(40)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio41.jpg" onclick="currentSlide(41)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio42.jpg" onclick="currentSlide(42)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio43.jpg" onclick="currentSlide(43)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio44.jpg" onclick="currentSlide(44)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio45.jpg" onclick="currentSlide(45)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio46.jpg" onclick="currentSlide(46)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio47.jpg" onclick="currentSlide(47)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio48.jpg" onclick="currentSlide(48)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio49.jpg" onclick="currentSlide(49)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio50.jpg" onclick="currentSlide(50)" alt="사입니다">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="../image/내부/studio51.jpg" onclick="currentSlide(51)" alt="사입니다">
-                            </div>
-
+                            
 
 
 
@@ -1013,8 +708,11 @@
 
         </aside>
     </main>
-    <footer>footer
-        <p>여기는 푸터입니다.</p>
+    <!-- footer -->
+    <footer>
+        <p>서울시 동작구 신대방동 364-90번지 | TEL:02-000-0000</p>
+        <p>사업자등록번호 : 100-00-00000 | 대표 : NTLCB</p>
+        <p>㈜ NTLCB COMPANY ALL RIGHTS RESERVED.</p>
     </footer>
 </body>
 

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이커리 -->
+    <!-- <script
+src="https://code.jquery.com/jquery-1.12.4.js"
+integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+crossorigin="anonymous">
+</script> -->
+
+    <!-- css링크들 -->
+    <!-- 공통 main.css 링크연결 -->
+    <link rel="stylesheet" href="../css/main_ver8.css">
+
+    <!-- leo 링크 코드 -->
+    <!-- 문의전화 이모티콘 링크 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- 서비스.css 링크 연결 -->
+    <link rel="stylesheet" href="../css/leo_ver3_service.css">
+    <!--  -->
+
+    <!-- js링크 -->
+    <!-- 공통 제이쿼리 연결  -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- 공통 main 링크 -->
+    <script src="../js/main_ver8.js"></script>
+    <!-- <script type="module" src="../js/service.js"></script> -->
+    <script type="module" src="../js/leo_ver1_service.js"></script>
+
+    <!--  -->
+
+    <!-- nav 아이콘 - 개인 페이지에도 복사하기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- ver7 swiper 링크 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- footer 연성(yeon sung)폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung:400" rel="stylesheet">
+</head>
+
+<body id="body_ratio" onscroll="scrollMove()" onload="GBI(); scrfix(); typing_main();">
+        <!-- top -->
+        <p id="motop"></p>
+        <a href="#motop">
+            <div id="top">top</div>
+        </a>
+    <!-- hearder_nav -->
+    <div id="fix_header_nav">
+        <nav>
+            <ul>
+                <!-- i태그 아이콘 추가 -->
+                <li><a href="../html/yu_ver2_intro.html"><i class="fa-solid fa-paw"></i>소개</a></li>
+                <li><a href="../html/leo_ver3_service.html"><i class="fa-solid fa-dog"></i>서비스</a></li>
+                <li><a href="../html/ahn_ver1.html"><i class="fa-solid fa-paw"></i>갤러리</a></li>
+                <li><a href="../html/mechuri_ver4.html"><i class="fa-solid fa-dog"></i>문의하기</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--  -->
+
+    <!-- main구간 -->
+
+    <main id="main_h">
+        <div id="fix_main" style="opacity: 90%;">
+            <header class="header_change">
+                <!-- 상단 login/mypage/cart section 만들어봄 -->
+                <div id="section_var">
+                    <div id="cart"><a href="../html/main_ver8.html">Home</a></div>
+                    <div id="login"><a href="../html/oneday_login.html">Login</a> </div>
+                    <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
+                </div>
+                <!-- 페이지 로고 추가 -->
+                <div id="logo">
+                    <a href="../html/main_ver8.html"><img src="../image/logo.png"></a>
+                </div>
+            </header>
+
+            <!-- ver7 각페이지 Swiper 추가 -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../image/swiper_dog1.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog2.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog3.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog4.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- <video class="background" autoplay muted loop width="100%">
+                <source src="../video/background1.mp4">
+                배경을 찾을 수 없습니다.
+            </video> -->
+        </div>
+        <aside>
+
+
+            <!-- 서비스 목록 -->
+            <div>
+                <h1 id="h1_center" style="float: left;">서비스
+                    <h3 style="margin-top: 528px; padding: 0; float: left; width: 200px;">
+                        /<a href="#스튜디오위치" style=" text-decoration: none;">스튜디오 위치</a>/ <a href="#예약"
+                            style="text-decoration: none;">예약</a>
+                    </h3>
+                </h1>
+            </div>
+
+            <!-- 촬영 -->
+            <!-- <div id="photo">         
+    <div id="photo_font">
+        <h2>촬영</h2>
+    </div>
+</div> -->
+
+            <!-- 촬영 이미지 -->
+            <div>
+                <div id="mous_fout">마우스를 올려주세요</div>
+                <div id="photo">
+                    <a href="#예약">
+
+                        <div id="inphoto">
+                            <p id="inphoto_font">실내촬영</p>
+                        </div>
+                    </a>
+
+                    <a href="#예약">
+
+                        <div id="outphoto">
+                            <p id="outphoto_font">실외촬영</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <hr>
+
+
+
+            <!-- 찾아올곳 지도  -->
+            <p id="스튜디오위치"></p>
+            <p id="map_font"> 스튜디오 위치 </p>
+            <!--The div element for the map -->
+            <div id="map"></div>
+
+            <!-- 
+ The `defer` attribute causes the callback to execute after the full HTML
+ document has been parsed. For non-blocking uses, avoiding race conditions,
+ and consistent behavior across browsers, consider loading using Promises
+ with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+-->
+            
+
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqSbkzKurdrpI-FxKQMHz0LiG2sNfxsSs&callback=initMap&v=weekly"
+                    defer></script>
+                <!-- <br> -->
+                <p id="p_center">
+                    <!-- 발걸음이미지 -->
+                    <span class="material-symbols-outlined">
+                        footprint
+                    </span>
+                    <!--  -->
+                    주소 : 서울시 동작구 신대방동 364-90번지
+                    <br><br><br><br>
+                    <!-- 대중교통 이미지 -->
+                    <span class="material-symbols-outlined">
+                        commute
+                    </span>
+                    <!--  -->
+                    대중교통 이용시 : 버스(당곡역사거리 정류장), 지하철(당곡역)
+                    <br><br><br><br>
+                    <!-- 문의전화 이미지 -->
+                    <span class="material-symbols-outlined">
+                        support_agent
+                    </span>
+                    <!--  -->
+                    문의전화 : 02-123-1234
+                    <br><br><br><br>
+                    <!-- 이메일 이미지 -->
+                    <span class="material-symbols-outlined">
+                        mark_as_unread
+                    </span> 이메일 : aaaa0000@naver.com
+                    <br><br><br><br>
+                    <!-- 이용시간 이미지 -->
+
+                    이용시간 : 09:00 ~ 17:00
+                </p>
+                <!--  -->
+                <p id="예약" style="margin-top: 600px;"></p>
+                <div id="both">
+            </div>
+      
+
+                <!-- <hr id="예약"> -->
+                <hr>
+
+
+                <!-- 예약 및 확인 -->
+
+
+
+
+                <!-- <table id="tr_th">
+    <thead id="tr_th">
+        <tr>
+            <th style="color: red;">일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th style="color: blue;">토</th>
+        </tr>
+    </thead>
+</table>
+<table id="tr_td">
+   
+        <tr id="tr_td">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+ 
+</table> -->
+                <p id="reservation_font">예약</p>
+
+
+
+                <div id="">
+                    <form action="">
+                        <fieldset id="fieldset_size_in">
+                            <div id="re">실내 촬영</div>
+                            <hr>
+                            <!-- 예약날짜선택 -->
+                            <input type="date" name="" id="date_in">
+                            <button onclick="reservation()" id="reservation_confirm_button">예약확인하기</button>
+                            <br><br>
+                            <!--  -->
+
+                            <!-- 예약자 -->
+                            <div id="name_font">
+                                예약자명
+                                <input type="text" name="" id="reservation_name" placeholder="이름을 정확히 기재해주세요.">
+                            </div>
+                            <br><br>
+                            <!--  -->
+
+                            <!-- 카드번호 -->
+                            <div id="name_font">
+                                카드번호<input type="text" name="" id="reservation_card_Number" placeholder="0000">
+                                -<input type="text" name="" id="reservation_card_Number" placeholder="0000">
+                                -<input type="password" name="" id="reservation_card_Number" placeholder="0000">
+                                -<input type="password" name="" id="reservation_card_Number" placeholder="0000">
+                            </div>
+                            <br><br>
+                            <!--  -->
+
+                            <!-- 전화번호 -->
+                            <div id="name_font">
+                                전화번호
+                                <input type="tel" name="" id="reservation_tel_Number" size="1em">
+                                -<input type="tel" name="" id="reservation_tel_Number" size="1em">
+                                -<input type="tel" name="" id="reservation_tel_Number" size="1em">
+                            </div>
+                            <br>
+                            <!-- 예약하기버튼 -->
+                            <button id="button_reservation" onclick="">예약하기</button>
+                        </fieldset>
+
+                    </form>
+                </div>
+
+                <div>
+
+                    <form action="">
+                        <fieldset id="fieldset_size_out">
+                            <div id="re">실외 촬영</div>
+                            <hr>
+                            <!-- 예약날짜선택 -->
+                            <input type="date" name="" id="date_in">
+                            <button onclick="reservation()" id="reservation_confirm_button">예약확인하기</button>
+                            <br>
+                            <!--  -->
+                            <br>
+                            <!-- 예약자 -->
+                            <div id="name_font">
+                                예약자명
+                                <input type="text" name="" id="reservation_name" placeholder="이름을 정확히 기재해주세요.">
+                            </div>
+                            <br><br>
+                            <!--  -->
+
+                            <!-- 카드번호 -->
+                            <div id="name_font">
+                                카드번호<input type="text" name="" id="reservation_card_Number" placeholder="0000">
+                                -<input type="text" name="" id="reservation_card_Number" placeholder="0000">
+                                -<input type="password" name="" id="reservation_card_Number" placeholder="0000">
+                                -<input type="password" name="" id="reservation_card_Number" placeholder="0000">
+                            </div>
+                            <br><br>
+                            <!--  -->
+
+                            <!-- 전화번호 -->
+                            <div id="name_font">
+                                전화번호
+                                <input type="tel" name="" id="reservation_tel_Number" size="1em">
+                                -<input type="tel" name="" id="reservation_tel_Number" size="1em">
+                                -<input type="tel" name="" id="reservation_tel_Number" size="1em">
+                            </div>
+                            <br>
+                            <!-- 예약하기버튼 -->
+                            <button id="button_reservation" onclick="">예약하기</button>
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <!-- 캘린더 -->
+            <div id="container">
+                <div id="calendar">
+                    <div id="month">
+                        <a href=""> &lt;</a>
+                        <div id="date">
+                            <h1>11월</h1>
+                            <p>2022년 11월 28일 월</p>
+                        </div>
+                        <a href="">&gt;</a>
+                    </div>
+                    <div class="weekdays">
+
+                        <div style="color: red;">일</div>
+                        <div>월</div>
+                        <div>화</div>
+                        <div>수</div>
+                        <div>목</div>
+                        <div>금</div>
+                        <div style="color: blue;">토</div>
+                    </div>
+                    <div class="days">
+                        <div id="prev-date">26</div>
+                        <div id="prev-date">27</div>
+                        <div id="prev-date">28</div>
+                        <div id="prev-date">29</div>
+                        <div id="prev-date">30</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div>29</div>
+                        <div>30</div>
+                        <div>31</div>
+                        <div id="next-date">1</div>
+                        <div id="next-date">2</div>
+                        <div id="next-date">3</div>
+                        <div id="next-date">4</div>
+                        <div id="next-date">5</div>
+                        <div id="next-date">6</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="script.js"></script>
+            <!--  -->
+
+
+            <input type="color" name="" id="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </aside>
+    </main>
+    <!--  -->
+
+    <!-- footer -->
+    <footer>
+        <p>서울시 동작구 신대방동 364-90번지 | TEL:02-000-0000</p>
+        <p>사업자등록번호 : 100-00-00000 | 대표 : NTLCB</p>
+        <p>㈜ NTLCB COMPANY ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+
+</html>

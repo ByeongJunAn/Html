@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css 링크연결 -->
+    <link rel="stylesheet" href="../css/main_ver8.css">
+    <!-- 제이쿼리 연결  -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/main_ver8.js"></script>
+    <!-- nav 아이콘 - 개인 페이지에도 복사하기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- ver7 swiper 링크 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body id="body_ratio" onscroll="scrollMove()" onload="GBI(); scrfix(); typing_main();">
+            <!-- top -->
+            <p id="motop"></p>
+            <a href="#motop">
+                <div id="top">top</div>
+            </a>
+    <!-- hearder_nav -->
+    <div id="fix_header_nav">
+        <nav>
+            <ul>
+                <!-- i태그 아이콘 추가 -->
+                <li><a href="../html/yu_ver2_intro.html"><i class="fa-solid fa-paw"></i>소개</a></li>
+                <li><a href="../html/leo_ver3_service.html"><i class="fa-solid fa-dog"></i>서비스</a></li>
+                <li><a href="../html/ahn_ver2.html"><i class="fa-solid fa-paw"></i>갤러리</a></li>
+                <li><a href="../html/mechuri_ver4.html"><i class="fa-solid fa-dog"></i>문의하기</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--  -->
+
+    
+    <!-- main구간 -->
+
+    <!-- 배경영상 -->
+    <video class="background" autoplay muted loop width="100%">
+        <source src="../video/background1.mp4">
+        배경을 찾을 수 없습니다.
+    </video>
+    
+    <main>
+        <div id="fix_main"> <!--ver7 슬라이드바 투명도 없앰-->
+            <header class="header_change">
+                <!-- 상단 login/mypage/cart section 만들어봄 -->
+                <div id="section_var">
+                    <div id="cart"><a href="../html/main_ver8.html">Home</a></div>
+                    <div id="login" onclick="pageChangeLoginOut()"><a href="#">Login</a></div>
+                    <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
+                </div>
+                <!-- 페이지 로고 추가 -->
+                <div id="logo">
+                    <a href="../html/main_ver8.html"><img src="../image/logo.png"></a>
+                </div>
+            </header>
+            <!-- ver7 각페이지 Swiper 추가 -->
+            <!-- <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../image/swiper_dog1.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog2.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog3.jpg"></div>
+                    <div class="swiper-slide"><img src="../image/swiper_dog4.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div> -->
+            <!--  -->
+        </div>
+        <aside style="opacity: 90%;">
+            <div id="div_half">
+                <div id="div_news">
+                    <div  id="div_quadrant1" class="div_quadrant" onmouseover="p_text_change_in('1','0순위','우리 회사 고객님의 순위는?')">
+                        <p id="p_v_text1" class="p_bigfont">우리 회사 고객님의 순위는?</p>
+                    </div>
+                    <div id="div_quadrant2" class="div_quadrant" onmouseover="p_text_change_in('2','1위','업계에서 우리 회사의 순위는?')">
+                        <p id="p_v_text2" class="p_bigfont">업계에서 우리 회사의 순위는?</p>
+                    </div>
+                    <div  id="div_quadrant3" class="div_quadrant" onmouseover="p_text_change_in('3','12,365분','우리회사와 함께하시는 분은 몇분?')"> 
+                        <p id="p_v_text3" class="p_bigfont">우리회사와 함께하시는 분은 몇분?</p>
+                    </div>
+                    <div id="div_quadrant4" class="div_quadrant" onmouseover="p_text_change_in('4','9.85','고객님께서 남겨주신 우리의 평점은?')">
+                        <p id="p_v_text4" class="p_bigfont">고객님께서 남겨주신 우리의 평점은?</p>
+                    </div>
+                    <div id="div_quadrant5" class="div_quadrant" onmouseover="p_text_change_in('5','859,365장!','우리 회사가 지금까지 찍은 사진 수는?')">
+                        <p id="p_v_text5" class="p_bigfont">우리 회사가 지금까지 찍은 사진 수는?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="div_half">
+                <div id="div_third_division">
+                    <div class="div_greetings">
+                        <p id="p_comper_velue">기업가치가 궁금하시다구요?</p>
+                        <a href="../html/yu_ver2_intro.html" class="a_gallery_colar">
+                        <div class="div_Lslide" ></div>
+                        </a>
+                    </div>
+                </div>
+                <div id="div_third_division">
+                    
+                    <!-- 누르면 예약 페이지로 이동-->
+                    <div id="div_half_division1">
+                        <p id="p_gallery">예약 바로가기</p>
+                        <a href="../html/leo_ver3_service.html" class="a_gallery_colar"><div id="div_reservation">예약 하기</div></a>
+                        <a href="../html/leo_ver3_service.html" class="a_gallery_colar"><div id="div_reservation">예약 확인</div></a>
+                    </div>
+
+
+                    <!-- 누르면 갤러리로 이동 -->
+                    <a href="../html/ahn_ver2.html" class="a_gallery_colar"><div id="div_half_division2">
+                        <p id="p_gallery">갤러리 둘러보기</p>
+                    </div></a>
+                    <!--  -->
+                </div>
+                <div id="div_third_division">
+                    <div id="div_review">
+                        <p id="p_review">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <!--  -->
+
+    <!-- footer -->
+    <footer>
+        <p>서울시 동작구 신대방동 364-90번지 | TEL:02-000-0000</p>
+        <p>사업자등록번호 : 100-00-00000 | 대표 : NTLCB</p>
+        <p>㈜ NTLCB COMPANY ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+
+</html>

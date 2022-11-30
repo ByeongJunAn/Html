@@ -270,7 +270,8 @@ footer{
     text-align: center;
 }
 #p_comper_velue{
-    margin-top: -3.3%;
+    display: inline-block;
+    font-size: 18px;
 }
 .p_check_v{
     display: none;
@@ -283,7 +284,6 @@ footer{
     background-image: url(../image/hello_demo.jpg);
     background-size: 100% 100%;
     border-radius: 10px;
-    transition-duration: 1s;
 }
 #div_half_division1{
     /* border: 1px solid rgb(0, 0, 0); */
@@ -375,3 +375,7 @@ footer{
     border-radius: 20%;
     
 }
+
+
+
+

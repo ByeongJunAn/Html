@@ -1,0 +1,130 @@
+header{
+    border: 1px solid red;
+    width: 100%;
+    height: 80px;
+}
+header>h1{
+    text-align: center;
+}
+nav{
+    border: 1px solid red;
+    width: 100%;
+    height: 50px;
+}
+nav>ul{
+    text-align: center;
+    padding-left: 0px;
+}
+nav>ul>li{
+    display: inline;
+    padding: 0px 20px 0px 20px;
+    letter-spacing: 3px;
+}
+main{
+    border: 1px solid red;
+    width: 100%;
+    height: 1000px;
+    display: center;
+}
+main>aside{
+    border: 1px solid red;
+    width: 90%;
+    height: 850px;
+    margin: 50px 5% 0px 5%;
+}
+footer{
+    border: 1px solid red;
+    width: 100%;
+    height: 50px;
+}
+#divsec1{
+    display: inline;
+    width: 33%;
+    height: 100%;
+    float: left;
+    background-image: url(../../images/산유화.jpg);
+    background-size: cover;
+    transition-duration: 1s;
+}
+#divsec1:hover{
+    background-image: url(../../images/강아지\ 못나옴.gif);
+}
+#divsec1:hover > #temp5{
+    opacity: 100%;
+}
+#divsec1:hover > #temp0{
+    margin-top: 20%;
+}
+#divsec2{
+    display: inline;
+    width: 34%;
+    height: 100%;
+    float: left;
+    background-image: url(../../images/산유화.jpg);
+    background-size: cover;
+    transition-duration: 1s;
+}
+#divsec2:hover{
+    background-image: url(../../images/강아지\ 빨리달림.gif);
+}
+#divsec2:hover > #temp3{
+    opacity: 100%;
+}
+#divsec2:hover > #temp1{
+    margin-top: 19%;
+}
+
+#divsec3{
+    display: inline;
+    width: 33%;
+    height: 100%;
+    float: left;
+    background-image: url(../../images/산유화.jpg);
+    background-size: cover;
+    transition-duration: 1s;
+}
+#divsec3:hover{
+    background-image: url(../../images/강아지\ 바둑돌\ 씹기.gif);
+}
+#divsec3:hover > #temp5{
+    opacity: 100%;
+}
+#divsec3:hover > #temp0{
+    margin-top: 20%;
+}
+#temp0{
+    width: 80%;
+    height: 10%;
+    margin: 40% 10% 0px 10%;
+    transition-duration: 1s;
+    text-align: center;
+}
+#temp1{
+    width: 80%;
+    height: 10%;
+    margin: 38% 10% 0px 10%;
+    transition-duration: 1s;
+    text-align: center;
+}
+#temp2{
+    margin-top: 7%;
+}
+#temp4{
+    margin-top: 7%;
+}
+#temp5{
+    border: 1px solid red;
+    width: 80%;
+    height: 40%;
+    margin: 25% 10% 0px 10%;
+    transition-duration: 1s;
+    opacity: 0%;
+}
+#temp3{
+    border: 1px solid red;
+    width: 80%;
+    height: 40%;
+    margin: 25% 10% 0px 10%;
+    transition-duration: 1s;
+    opacity: 0%;
+}

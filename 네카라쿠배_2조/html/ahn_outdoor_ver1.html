@@ -1,29 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- css 링크연결 -->
+    <link rel="stylesheet" href="../css/main_ver8.css">
     <link rel="stylesheet" href="../css/ahn_outdoor_ver1.css">
-    
-    </link>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="../js/ahn_outdoor_ver1.js"></script>
-
-
+    <!-- 제이쿼리 연결  -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/main_ver8.js"></script>
+    <script src="../js/ahn_outdoor_ver1.js"></script>
+    <!-- nav 아이콘 - 개인 페이지에도 복사하기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- ver7 swiper 링크 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 
-<body>
+<body id="body_ratio" onscroll="scrollMove()" onload="GBI(); scrfix(); typing_main();">
+    <!-- top -->
+    <p id="motop"></p>
+    <a href="#motop">
+        <div id="top">top</div>
+    </a>
+<!-- hearder_nav -->
+<div id="fix_header_nav">
+<nav>
+    <ul>
+        <!-- i태그 아이콘 추가 -->
+        <li><a href="../html/yu_ver2_intro.html"><i class="fa-solid fa-paw"></i>소개</a></li>
+        <li><a href="../html/leo_ver3_service.html"><i class="fa-solid fa-dog"></i>서비스</a></li>
+        <li><a href="../html/ahn_ver2.html"><i class="fa-solid fa-paw"></i>갤러리</a></li>
+        <li><a href="../html/mechuri_ver4.html"><i class="fa-solid fa-dog"></i>문의하기</a></li>
+    </ul>
+</nav>
+</div>
+<!--  -->
 
 
-    <header>
-        <h1>사이트 이름입니다.</h1>
-        header
+<!-- main구간 -->
 
+<!-- 배경영상 -->
+<!-- <video class="background" autoplay muted loop width="100%">
+<source src="../video/background1.mp4">
+배경을 찾을 수 없습니다.
+</video> -->
+
+<main id="main_ahn3">
+<div id="fix_main"> <!--ver7 슬라이드바 투명도 없앰-->
+    <header class="header_change">
+        <!-- 상단 login/mypage/cart section 만들어봄 -->
+        <div id="section_var">
+            <div id="cart"><a href="../html/main_ver8.html">Home</a></div>
+            <div id="login" onclick="pageChangeLoginOut()"><a href="#">Login</a></div>
+            <div id="mypage"><a href="../html/oneday_signUp.html">MyPage</a></div>
+        </div>
+        <!-- 페이지 로고 추가 -->
+        <div id="logo">
+            <a href="../html/main_ver8.html"><img style="width: 250px; height: 90px; margin: 0px 40% 0px 40% ;" src="../image/logo.png"></a>
+        </div>
     </header>
-    <main>
+    <!-- ver7 각페이지 Swiper 추가 -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../image/swiper_dog1.jpg"></div>
+            <div class="swiper-slide"><img src="../image/swiper_dog2.jpg"></div>
+            <div class="swiper-slide"><img src="../image/swiper_dog3.jpg"></div>
+            <div class="swiper-slide"><img src="../image/swiper_dog4.jpg"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--  -->
+</div>
+        <aside id="aside_ahn">
+
         <aside>
 
-            <h1>외부 촬영</h1>
+            <p style="font-size: 30px; margin: 0px 28% 20px 32%;">밖에서는 강아지들의 귀여움이 배가되죠!</p>
 
             <div class="row">
                 <div class="column">
@@ -86,6 +145,100 @@
                         alt="a dog">
                 </div>
 
+                <div class="column">
+                    <img src="../image/외부/outdoor13.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow"
+                        alt="a dog">
+
+                </div>
+                <div class="column">
+                    <img src="../image/외부/outdoor14.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor15.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor16.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor17.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor18.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor19.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor20.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor21.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor22.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor23.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor24.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor25.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor26.jpg" onclick="openModal();currentSlide(26)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor27.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor28.jpg" onclick="openModal();currentSlide(28)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
+                <div class="column">
+                    <img src="../image/외부/outdoor29.jpg" onclick="openModal();currentSlide(29)" class="hover-shadow"
+                        alt="a dog">
+                </div>  <div class="column">
+                    <img src="../image/외부/outdoor30.jpg" onclick="openModal();currentSlide(30)" class="hover-shadow"
+                        alt="a dog">
+                </div>  <div class="column">
+                    <img src="../image/외부/outdoor31.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow"
+                        alt="a dog">
+                </div>  <div class="column">
+                    <img src="../image/외부/outdoor32.jpg" onclick="openModal();currentSlide(32)" class="hover-shadow"
+                        alt="a dog">
+                </div>
+
 
                 <div id="myModal">
                     <div class="modal">
@@ -95,7 +248,7 @@
 
                             <div class="mySlides"> <!--js용-->
                                
-                                <div class="numbertext">1 / 4
+                                <div class="numbertext">1 / 32
                                 </div>
                                 <div id="modal_main_img">
                                     <!--이미지의 중앙정렬을 위해 사용-->
@@ -107,7 +260,7 @@
                             </div>
 
                             <div class="mySlides">
-                                <div class="numbertext">2 / 4
+                                <div class="numbertext">2 / 32
                                 </div>
                                 <div id="modal_main_img">
                                 <img src="../image/외부/outdoor2.jpg" id="modal_main_img_size">
@@ -115,7 +268,7 @@
                             </div>
 
                             <div class="mySlides">
-                                <div class="numbertext">3 / 4
+                                <div class="numbertext">3 / 32
                                 </div>
                                 <div id="modal_main_img">
                                 <img src="../image/외부/outdoor3.jpg" id="modal_main_img_size">
@@ -123,13 +276,245 @@
                             </div>
 
                             <div class="mySlides">
-                                <div class="numbertext">4 / 4
+                                <div class="numbertext">4 / 32
                                 </div>
                                 <div id="modal_main_img">
                                 <img src="../image/외부/outdoor4.jpg" id="modal_main_img_size">
                                 </div>
                             </div>
 
+                            <div class="mySlides">
+                                <div class="numbertext">5 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor5.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">6 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor6.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">7 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor7.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">8 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor8.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">9 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor9.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">10 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor10.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">11 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor11.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">12 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor12.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">13 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor13.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">14 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor14.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">15 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor15.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">16 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor16.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">17 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor17.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">18 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor18.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">19 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor19.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">20 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor20.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">21 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor21.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">22 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor22.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">23 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor23.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">24 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor24.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">25 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor25.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">26 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor26.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">27 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor27.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">28 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor28.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">29 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor29.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">30 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor30.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">31 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor31.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">32 / 32
+                                </div>
+                                <div id="modal_main_img">
+                                <img src="../image/외부/outdoor32.jpg" id="modal_main_img_size">
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                            
 
                         </div>
 
@@ -152,21 +537,140 @@
                         <!-- Thumbnail image controls -->
 
                         <div class="column">
-                            <img class="demo" src="../image/외부/outdoor1.jpg" onclick="currentSlide(1)" alt="일입니다">
+                            <img class="demo" src="../image/외부/outdoor1.jpg" onclick="currentSlide(1)" >
                         </div>
 
                         <div class="column">
-                            <img class="demo" src="../image/외부/outdoor2.jpg" onclick="currentSlide(2)" alt="이입니다">
+                            <img class="demo" src="../image/외부/outdoor2.jpg" onclick="currentSlide(2)" >
                         </div>
 
                         <div class="column">
-                            <img class="demo" src="../image/외부/outdoor3.jpg" onclick="currentSlide(3)" alt="삼입니다">
+                            <img class="demo" src="../image/외부/outdoor3.jpg" onclick="currentSlide(3)" >
                         </div>
 
                         <div class="column">
-                            <img class="demo" src="../image/외부/outdoor4.jpg" onclick="currentSlide(4)" alt="사입니다">
+                            <img class="demo" src="../image/외부/outdoor4.jpg" onclick="currentSlide(4)" >
 
                         </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor5.jpg" onclick="currentSlide(5)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor6.jpg" onclick="currentSlide(6)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor7.jpg" onclick="currentSlide(7)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor8.jpg" onclick="currentSlide(8)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor9.jpg" onclick="currentSlide(9)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor10.jpg" onclick="currentSlide(10)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor11.jpg" onclick="currentSlide(11)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor12.jpg" onclick="currentSlide(12)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor13.jpg" onclick="currentSlide(13)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor14.jpg" onclick="currentSlide(14)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor15.jpg" onclick="currentSlide(15)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor16.jpg" onclick="currentSlide(16)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor17.jpg" onclick="currentSlide(17)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor18.jpg" onclick="currentSlide(18)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor19.jpg" onclick="currentSlide(19)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor20.jpg" onclick="currentSlide(20)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor21.jpg" onclick="currentSlide(21)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor22.jpg" onclick="currentSlide(22)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor23.jpg" onclick="currentSlide(23)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor24.jpg" onclick="currentSlide(24)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor25.jpg" onclick="currentSlide(25)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor26.jpg" onclick="currentSlide(26)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor27.jpg" onclick="currentSlide(27)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor28.jpg" onclick="currentSlide(28)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor29.jpg" onclick="currentSlide(29)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor30.jpg" onclick="currentSlide(30)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor31.jpg" onclick="currentSlide(31)" >
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="../image/외부/outdoor32.jpg" onclick="currentSlide(32)" >
+                        </div>
+
+                       
+
+
+
+
+
                     </div>
                 </div>
 
@@ -179,8 +683,11 @@
 
     </aside>
     </main>
-    <footer>footer
-        <p>여기는 푸터입니다.</p>
+    <!-- footer -->
+    <footer>
+        <p>서울시 동작구 신대방동 364-90번지 | TEL:02-000-0000</p>
+        <p>사업자등록번호 : 100-00-00000 | 대표 : NTLCB</p>
+        <p>㈜ NTLCB COMPANY ALL RIGHTS RESERVED.</p>
     </footer>
 </body>
 </html>
