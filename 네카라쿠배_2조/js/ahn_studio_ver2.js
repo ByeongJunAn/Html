@@ -1,25 +1,27 @@
-// Open the Modal
+//모달창 열기
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
 
-// Close the Modal
+// 모달창 닫기
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
+// 슬라이드 초기화
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+// 이전, 다음 키 컨트롤
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+// 썸네일 이미지 컨트롤
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
 
 function showSlides(n) {
   var i;

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\\CSS\\oneday_login.css">
+    <script src="..\\JS\\oneday_login.js"></script>
+    <title>signUp</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="..\\image\\mechuri_강아지.jpg" alt="">
+    </div>
+    <div class="login_box">
+        <h2>회 원 가 입</h2>
+        <form name="login_form" action="/cookie" method="get" id="alert_username">
+            <div class="user_box">
+                <input type="name" name="username" id="alert_name" required="">
+                <label>아이디</label>
+                <div class="form_text_alert_padding">
+                    <div id="alert_name" class="form_text_alert"></div>
+                </div>
+            </div>
+            <div class="user_box">
+                <input type="text" name="userid" id="alert_id" required="">
+                <label>이름</label>
+                <div class="form_text_alert_padding">
+                    <div id="alert_id" class="form_text_alert"></div>
+                </div>
+            </div>
+            <div class="user_box">
+                <input type="password" name="password" id="alert_password" required="">
+                <label>비밀번호</label>
+                <div class="form_text_alert_padding">
+                    <div id="alert_password" class="form_text_alert"></div>
+                </div>
+            </div>
+            <div class="user_box">
+                <input type="number" name="phonenumber" id="alert_phonenumber" required="">
+                <label>전화번호</label>
+                <div class="form_text_alert_padding">
+                    <div id="alert_phonenumber" class="form_text_alert"></div>
+                </div>
+            </div>
+          
+          <a href="#" class="form_submit_button" onclick="signUp()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            완료
+          </a>
+
+          <a href="#" class="form_submit_button" onclick="pagechangelogin()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            로그인 페이지
+         </a>
+        </form>
+      </div>
+</body>
+</html>

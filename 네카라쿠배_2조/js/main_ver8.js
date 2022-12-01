@@ -130,6 +130,7 @@ function typing_main() {
 function pageChangeLoginOut(){
     if (document.getElementById("login").innerHTML == "Logout"){
         document.getElementById("login").innerHTML = "Login";
+        localStorage.flag = "0";
     }else {
         var link = '..\\HTML\\oneday_login.html';
         location.href = link;

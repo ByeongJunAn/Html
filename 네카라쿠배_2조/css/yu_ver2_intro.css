@@ -1,0 +1,128 @@
+
+#aside_yu{
+    border: 1px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 650px;
+    margin: 5% 10% 0px 10%;
+    /* aside color 추가 */
+    background-image: url(../image/고개돌린\ 개1.jpg);
+    background-size: 100% 100%;
+    /* margin-top: 10%; */
+}
+#main_yu{
+    width: 100%;
+    height: 900px;
+    display: center;
+    /* main color 추가 */
+    /* font 추가 */
+    font-family: 'NanumSquareNeo-Variable';
+}
+#fix_main{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-size: 100% 100%;
+    background-image: url(../image/mechuri_강아지.jpg);
+}
+#divsec1{
+    display: inline;
+    width: 33%;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    transition-duration: 1s;
+    
+}
+#divsec1:hover{
+    /* box-shadow: 0 10px 10px rgba(196, 187, 187, 0.8); */
+    background-image: url(../image/도도한\ 시바1.jpg);
+}
+#divsec1:hover > #temp5{
+    opacity: 100%;
+}
+#divsec1:hover > #temp0{
+    margin-top: 20%;
+}
+#divsec2{
+    display: inline;
+    width: 34%;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    transition-duration: 1s;
+}
+#divsec2:hover{
+    background-image: url(../image/신난\ 하얀색\ 강아지2.jpg);
+    
+}
+#divsec2:hover > #temp3{
+    opacity: 100%;
+}
+#divsec2:hover > #temp1{
+    margin-top: 19%;
+}
+
+#divsec3{
+    display: inline;
+    width: 33%;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    transition-duration: 1s;
+}
+#divsec3:hover{
+    background-image: url(../image/여행온\ 강아지.jpg);
+}
+#divsec3:hover > #temp5{
+    opacity: 100%;
+}
+#divsec3:hover > #temp0{
+    margin-top: 20%;
+}
+#temp0{
+    width: 80%;
+    height: 10%;
+    margin: 40% 10% 0px 10%;
+    transition-duration: 1s;
+    text-align: center;
+}
+#temp1{
+    width: 80%;
+    height: 10%;
+    margin: 38% 10% 0px 10%;
+    transition-duration: 1s;
+    text-align: center;
+}
+#temp2{
+    margin-top: 7%;
+    color: white;
+    text-shadow: 0 10px 10px black;
+
+}
+#temp4{
+    margin-top: 7%;
+    color: white;
+    text-shadow: 0 10px 10px black;
+
+}
+#temp5{
+    width: 80%;
+    height: 40%;
+    margin: 50% 10% 0px 10%;
+    transition-duration: 1s;
+    opacity: 0%;
+    color: white;
+}
+#temp3{
+    width: 80%;
+    height: 40%;
+    margin: 50% 10% 0px 10%;
+    transition-duration: 1s;
+    opacity: 0%;
+}
+#movet{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 10px 10px black;
+}

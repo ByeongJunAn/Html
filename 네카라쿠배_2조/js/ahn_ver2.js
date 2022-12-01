@@ -11,11 +11,6 @@ function scrollMove() {
     });
 };
 
-//갤러리 둘러보기 바꾸기
-function GBI() {
-    setTimeout(change_img1, 2000);
-};
-
 
 //[메인 페이지에 들어갈 갤러리 구역에 병준 링크 추가하기]
 function change_img1() {
@@ -119,17 +114,3 @@ function myFunction(imgs) {
   }
 
 
-  /*---------------------parallax(swiper)------------------*/
-
-//   var swiper = new Swiper(".mySwiper", {
-//     speed: 600,
-//     parallax: true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });

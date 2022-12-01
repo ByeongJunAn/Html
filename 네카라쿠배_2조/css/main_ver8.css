@@ -23,8 +23,11 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'KOFIHDrLEEJWTTF-B';
+
 }
 /* 전체 픽셀 고정*/
+
 #body_ratio{
     max-width: 1920px;
     max-height: 1080px;
@@ -185,7 +188,7 @@ nav>ul>li>a {
 /*  */
 
 main{
-    width: 100%;
+    max-width: 3024px;
     height: 1200px;
     display: center;
     /* main color 추가 */
@@ -194,7 +197,7 @@ main{
 }
 main>aside{
     /* border: 1px solid rgb(0, 0, 0); */
-    width: 90%;
+    max-width: 3092px;
     height: 850px;
     margin: -35% 5% 0px 5%;
     /* aside color 추가 */
@@ -362,7 +365,7 @@ footer{
 /* top */
 #top{
     margin-left: 95%;
-    margin-top: 800px;
+    margin-top: 49%;
     position: fixed;
     width: 50px;
     height: 50px;
@@ -375,7 +378,3 @@ footer{
     border-radius: 20%;
     
 }
-
-
-
-
