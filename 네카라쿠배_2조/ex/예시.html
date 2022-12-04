@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--css 연결-->
+    <link rel="stylesheet" href="../ex/예시.css">
+    <!--js 연결-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../ex/예시.js"></script>
+    
+</head>
+<body>
+    
+    <div class="row">
+        
+        <!--메인 사진-->
+        <div class="column">
+            <img id="img_ahn" src="../image/내부/studio8.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"
+                alt="a dog">
+        </div>
+
+        <div class="column">
+            <img  id="img_ahn" src="../image/내부/studio9.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"
+                alt="a dog">
+        </div>
+
+        <div class="column">
+            <img  id="img_ahn" src="../image/내부/studio10.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
+                alt="a dog">
+        </div>
+
+
+        <!--모달창과 중앙사진-->
+        <div id="myModal">
+            <div class="modal">
+                <!--닫기 버튼-->
+                <span class="close" onclick="closeModal()">&times;</span>
+
+                <!-- 이전, 다음 컨트롤러 -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="modal-content">
+
+
+                    <div class="mySlides">
+                        <!--js용-->
+
+                        <div id="modal_main_img">
+                            <!--이미지의 중앙정렬을 위해 사용-->
+
+                            <img src="../image/내부/studio8.jpg" id="modal_main_img_size">
+                            <!--이미지 자체의 사이즈 조절을 위해 사용-->
+
+                        </div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div id="modal_main_img">
+                            <img src="../image/내부/studio9.jpg" id="modal_main_img_size">
+                        </div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div id="modal_main_img">
+                            <img src="../image/내부/studio10.jpg" id="modal_main_img_size">
+                        </div>
+                    </div>
+
+                    
+
+                    <!--모달창 아래 이미지-->
+                    <div class="column_mo">
+                        <img class="demo" src="../image/내부/studio8.jpg" onclick="currentSlide(1)">
+                    </div>
+
+                    <div class="column_mo">
+                        <img class="demo" src="../image/내부/studio9.jpg" onclick="currentSlide(2)" >
+                    </div>
+
+                    <div class="column_mo">
+                        <img class="demo" src="../image/내부/studio10.jpg" onclick="currentSlide(3)">
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+
+</body>
+</html>
