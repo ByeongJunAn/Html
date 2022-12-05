@@ -83,10 +83,10 @@ img:hover {opacity: 1.0;}
 }
 /* 모달창 */
 .modal {
-  margin: auto;
+  /* margin: auto;
   display: block;
    height: 100%;
-  left: 0;
+  left: 0; */
   animation-name: zoom;
   animation-duration: 0.8s;
   margin: 0px 6% 0px 6%;
@@ -140,17 +140,17 @@ img:hover {opacity: 1.0;}
 
 
 /* Hide the slides by default */
-.mySlides {
+/* .mySlides {
   display: none;
   width: 100%;
   display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 
-/* Next & previous buttons */
+/* 다음, 이전 버튼 */
 .prev,
 .next {
   cursor: pointer;
@@ -168,24 +168,25 @@ img:hover {opacity: 1.0;}
   -webkit-user-select: none;
 }
 
+/*이전버튼의 위치를 왼쪽으로 보내기*/
 .prev{
   left: 0;
   
 }
 
-/* Position the "next button" to the right */
+/* 다음버튼의 위치를 오른쪽으로 보내기  */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* 이전, 다음버튼에 마우스를 갖다 댈 시 해당 구역에 백그라운드컬러를 줘서 작동 함을 알려주기 */
 .prev:hover,
 .next:hover {
   background-color: rgba(200, 95, 95, 0.8);
 }
 
-/* Number text (1/3 etc) */
+/* 사진의 진행상황 숫자로 표현하기 (1/3 etc) */
 .numbertext {
   color: #dc0d0d;
   font-size: 12px;
@@ -196,14 +197,14 @@ img:hover {opacity: 1.0;}
 }
 
 /*까만 줄 안의 글씨*/
-#caption{
+/* #caption{
   padding: 2px;
   margin: 3px;
   text-align: center;
   font-size: 3px;
   width: 500px;
   height: 10%;
-}
+} */
 
 
 /* Caption text box*/

@@ -1,0 +1,154 @@
+
+
+/*[[[[[[[[[[모달창]]]]]]]]]]*/
+
+/*모달창 백그라운드*/
+#myModal {
+    display: none; /* 모달창 숨겨 놓기 */
+    position: fixed; /*모달창 고정*/
+    z-index: 100000000000; /* 모달창을 제일 앞에 두기 */
+    padding-top: 100px;
+    padding-left: 0;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto; /* 스크롤 허용 auto */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-block: 0;
+  
+    
+  }
+
+
+/*모달창에 애니메이션, 마진으로 범위 줄이기*/
+.modal {
+    animation-name: zoom;
+    animation-duration: 0.8s;
+    margin: 0px 6% 0px 6%;
+    
+  }
+
+
+
+
+
+/*[[[[[[[[[[모달창 내의 다음, 이전 버튼]]]]]]]]]]*/
+  /* 다음, 이전 버튼 */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/*이전버튼의 위치를 왼쪽으로 보내기*/
+.prev{
+  left: 0;
+  
+}
+
+/* 다음버튼의 위치를 오른쪽으로 보내기  */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* 이전, 다음버튼에 마우스를 갖다 댈 시 해당 구역에 백그라운드컬러를 줘서 작동 함을 알려주기 */
+.prev:hover,
+.next:hover {
+  background-color: rgba(200, 95, 95, 0.8);
+}
+
+
+
+
+
+
+/* 닫기 버튼 꾸미기 */
+.close{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover, .close:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*모달 내에 있는 메인 사진의 크기 조절*/
+#modal_main_img_size{
+  top : 10%;
+  width: 700px;
+  height: auto;
+  margin: 5% 5% 5% 5%;
+}
+
+
+
+
+
+
+#modal_main_img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+img.demo {
+  opacity: 0.6;
+  height: 50px;
+  width: auto;
+  
+  
+  
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+ 
+
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+
+.column_mo{
+  float: left;
+  width: 170px;
+  height: auto;
+  position:static;
+}
+
