@@ -42,3 +42,10 @@ function showSlides(n) {
 }
 
 
+
+
+
+
+//slideindex : 모달창 메인 사진번호 
+//function plusSlide(n) : 플러스슬라이드 함수에는 slideindex의 값에 +1 하는 식이 들어있다.
+//function 
